@@ -9,9 +9,7 @@ $(function() {
 			if($(this).val() == $(this).attr("title")) {
 				$(this).val("").addClass("focused");	
 			}
-		});
-		
-		$(this).blur(function() {
+		}).blur(function() {
 			if($(this).val() === "") {
 				$(this).val($(this).attr("title")).removeClass("focused");	
 			}
