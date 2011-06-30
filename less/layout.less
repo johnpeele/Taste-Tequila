@@ -1,0 +1,119 @@
+/* 
+* Skeleton V1.0.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 5/20/2011
+* UPDATED - John Peele/Rockbeatspaper - 6/30/2011
+*/
+
+/* Table of Content
+==================================================
+  #LESS Bootstrap - Mark Dotto
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face 
+	#Browser Debugging */
+	
+/* #LESS Bootstrap - Mark Dotto
+================================================== */
+@import "bootstrap.less";
+
+/* #Site Styles
+================================================== */
+body { background: #f9f5eb url(/images/bg_main.png); }
+a, a:active, a:visited { text-decoration: none; color: @link-color; -webkit-transition: color 0.3s linear; }
+a:hover { text-decoration: underline; color: @link-hover-color; }
+
+/* ---------------------------------------------------------------------------------------------
+
+	header
+
+--------------------------------------------------------------------------------------------- */
+#header-wrapper { background: url(/images/bg_header-wrapper.png) repeat-x; }
+#header-wrapper header { height: 108px; }
+
+#identity { margin-left: 10px; }
+#identity h1 { margin: 0; width: 320px; height: 72px; }
+#identity h1 a { width: 320px; height: 72px; display: block; text-indent: -9999px; background: url(/images/bg_logo-h1.png) no-repeat; }
+#identity h2 { display: none; }
+
+#primary-nav { margin: 0 10px; height: 36px; }
+#primary-nav ul.nav-tabs { float: left; position: relative; }
+#primary-nav li { margin-right: 5px; }
+#primary-nav a { padding: 11px 10px 7px 10px; display: block; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
+#primary-nav a:hover { text-decoration: none; }
+#primary-nav a.has-drop { padding-right: 23px; background: url(/images/bg_dropdown-arrow.png) 100% 50% no-repeat; }
+#primary-nav li:hover, #primary-nav li.hover, #primary-nav a.has-drop:hover { background-color: #ccc; }
+#primary-nav li ul.dropdown { margin: 0; padding: 5px 0; width: 120px; position: absolute; top: 36px; display: none; background: #ccc; z-index: 3; }
+#primary-nav li ul.dropdown li { margin: 0; clear: left; }
+#primary-nav li ul.dropdown li a { padding: 5px 10px; font-size: 11px; }
+
+/* ---------------------------------------------------------------------------------------------
+
+	content
+
+--------------------------------------------------------------------------------------------- */
+#content { height: 800px; /* just for testing */ }
+
+/* ---------------------------------------------------------------------------------------------
+
+	footer
+
+--------------------------------------------------------------------------------------------- */
+#footer-wrapper { background: #fff url(/images/bg_footer-wrapper.png) 0 0 repeat-x; }
+footer { padding-top: 36px; height: 108px; }
+footer h3, footer nav { margin-left: 10px; }
+footer p { margin-right: 10px; }
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+	
+	/* iPad Portrait/Browser */
+	@media only screen and (min-width: 768px) and (max-width: 991px) {}
+	
+	/* Mobile/Browser */
+	@media only screen and (max-width: 767px) {}
+	
+	/* Mobile Landscape/Browser */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+	
+	/* Anything smaller than standard 960 */
+	@media only screen and (max-width: 959px) {}
+	
+	/* iPad Portrait Only */
+	@media only screen and (min-width: 768px) and (max-width: 991px) and (max-device-width: 1000px) {}
+	
+	/* Mobile Only */
+	@media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
+	
+	/* Mobile Landscape Only */
+	@media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
+	
+
+/* #Font-Face
+================================================== */
+@font-face {
+  font-family: 'BrandonGrotesque-Bold';
+  src: url('/css/fonts/brandon/eot/style_187190.eot');
+  src: url('/css/fonts/brandon/eot/style_187190.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/brandon/woff/style_187190.woff') format('woff'),
+       url('/css/fonts/brandon/ttf/style_187190.ttf') format('truetype'),
+       url('/css/fonts/brandon/svg/style_187190.svg#BrandonGrotesque-Bold') format('svg');
+}
+
+
+/* #Browser Debugging
+================================================== */
+.ie6 { }
+.ie7 { }
+.ie8 { }
+
+.ff2 { }
+.ff3 { }
+.ff3_6 { }

@@ -14,39 +14,66 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/960.css" />
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+  <link rel="stylesheet" href="/css/layout.css" />
 
   <!-- MODERNIZR -->
   <script src="/js/libs/modernizr-1.7.min.js"></script>
+  
+  <!-- FAVICONS -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
 
 </head>
 
 <body id="s-community">
 
   <div id="header-wrapper">
-    <header class="container-12">
-      <hgroup>
+    <header class="container container-twelve">
+      <hgroup id="identity">
         <h1><a href="/">Taste Tequila</a></h1>
         <h2>Your Tequila Matchmaker</h2>
       </hgroup>
       <nav id="primary-nav">
-        <ul class="tabs">
-          <li><a href="#">Tequilas</a></li>
-          <li><a href="#">Tequila Experts</a></li>
-          <li><a href="#">Bars &amp; Retailers</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Become an Expert</a></li>
+        <ul class="nav-tabs">
+          <li>
+            <a href="#" class="has-drop">Tequilas</a>
+            <ul class="dropdown">
+            	<li>
+            		<a href="#">Browse Brands</a>
+            	</li>
+            	<li>
+            		<a href="#">Top Rated</a>
+            	</li>
+            	<li>
+            		<a href="#">Best Buys</a>
+            	</li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="has-drop">Tequila Experts</a>
+          </li>
+          <li>
+            <a href="#" class="has-drop">Bars &amp; Retailers</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="has-drop">Become an Expert</a>
+          </li>
         </ul>
         <form action="/search/" method="post" id="search" role="search">
-						<label for="s">Search</label>
-						<input type="text" name="search" id="search" value="Search" />
-						<button>Go</button>
+					<label for="s">Search</label>
+					<input type="text" name="search" id="search" value="Search" />
+					<button>Go</button>
 				</form>
       </nav>
       <div id="account">
         <strong>Ready to start?</strong>
-        <ul class="tabs">
+        <ul class="nav-tabs">
           <li><a href="#">Register</a> <em>or</em></li>
           <li><a href="#">Sign In</a></li>
         </ul>
@@ -54,6 +81,24 @@
     </header>
   </div> <!-- /#header-wrapper -->
   
+  <div id="content" class="container container-twelve">
+    
+  </div> <!-- /#content -->
+  
+  <div id="footer-wrapper">
+    <footer class="container container-twelve">
+      <h3>Taste Tequila - Your Tequila Matchmaker</h3>
+      <nav id="footer-nav">
+        <ul class="nav-tabs">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </nav>
+      <p id="copyright">Taste Tequila &copy; 2011 S2F, Inc. All Rights Reserved.</p>
+    </footer>
+  </div> <!-- /#footer-wrapper -->
   
   <!-- JS at the bottom for fast page loading -->
   
