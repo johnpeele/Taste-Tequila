@@ -31,11 +31,11 @@
 <body id="s-community">
 
   <div id="header-wrapper">
-    <header class="container container-twelve">
+    <header id="mast" class="container container-twelve">
       <hgroup id="identity">
         <h1><a href="/">Taste Tequila</a></h1>
         <h2>Your Tequila Matchmaker</h2>
-      </hgroup>
+      </hgroup> <!-- /#identity -->
       <nav id="primary-nav">
         <ul class="nav-tabs">
           <li>
@@ -71,7 +71,7 @@
             </ul>
           </li>
         </ul>
-      </nav>
+      </nav> <!-- /#primary-nav -->
       <div id="search">
         <form action="/search/" method="post" role="search">
 					<label for="q">Search</label>
@@ -86,16 +86,36 @@
           <li><a href="#">Sign In</a></li>
         </ul>
       </div> <!-- /#account -->
-    </header>
+    </header> <!-- /#mast -->
   </div> <!-- /#header-wrapper -->
   
   <div id="content" class="container container-twelve">
-    
+    <section id="main" class="two-thirds column">
+      <header id="main-header">
+        
+      </header> <!-- /#main-header -->
+    </section> <!-- /#main -->
+    <section id="sidebar" class="one-third column">
+      <header id="sidebar-header">
+        
+      </header> <!-- /#sidebar-header -->
+      <div id="nodes">
+        <div class="node">
+          
+        </div> <!-- /.node -->
+        <div class="node">
+          
+        </div> <!-- /.node -->
+        <div class="node">
+          
+        </div> <!-- /.node -->
+      </div> <!-- /#nodes -->
+    </section> <!-- /#sidebar -->
   </div> <!-- /#content -->
   
   <div id="footer-wrapper">
     <footer class="container container-twelve">
-      <h3>Taste Tequila - Your Tequila Matchmaker</h3>
+      <h3><a href="/">Taste Tequila - Your Tequila Matchmaker</a></h3>
       <nav id="footer-nav">
         <ul class="nav-tabs">
           <li><a href="#">About</a></li>
@@ -103,8 +123,8 @@
           <li><a href="#">FAQ</a></li>
           <li><a href="#">Help</a></li>
         </ul>
-      </nav>
-      <p id="copyright">Taste Tequila &copy; 2011 S2F, Inc. All Rights Reserved.</p>
+      </nav> <!-- /#footer-nav -->
+      <p id="copyright">Taste Tequila &copy; 2011 S2F, Inc. All Rights Reserved.</p> <!-- /#copyright -->
     </footer>
   </div> <!-- /#footer-wrapper -->
   
