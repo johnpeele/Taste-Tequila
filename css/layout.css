@@ -139,10 +139,13 @@ a:hover {
   float: none;
   display: block;
   font-family: "BrandonGrotesque-Regular";
+  -webkit-transition: none;
 }
 #primary-nav li ul.dropdown li a:hover {
   display: block;
-  background-color: #f9f5eb;
+  font-family: "BrandonGrotesque-Bold";
+  color: #ffffff;
+  background-color: #fe6a00;
 }
 #search {
   margin-left: 10px;

@@ -49,8 +49,8 @@ a:hover { color: @link-hover-color; }
 #primary-nav li:hover, #primary-nav li.hover, #primary-nav a.has-drop:hover { background-color: #fff; .border-radius(5px, 5px, 0, 0); }
 #primary-nav li ul.dropdown { margin: 0; padding: 5px 0; min-width: 205px; position: absolute; top: 36px; display: none; background: @white; .border-radius(0, 0, 5px, 5px); border-bottom: 1px solid #e0dcd3; z-index: 3; }
 #primary-nav li ul.dropdown li { margin: 0; width: 100%; clear: left; }
-#primary-nav li ul.dropdown li a { float: none; display: block; font-family: "BrandonGrotesque-Regular"; }
-#primary-nav li ul.dropdown li a:hover { display: block; background-color: @beige-light; }
+#primary-nav li ul.dropdown li a { float: none; display: block; font-family: "BrandonGrotesque-Regular"; -webkit-transition: none; }
+#primary-nav li ul.dropdown li a:hover { display: block; font-family: "BrandonGrotesque-Bold"; color: @white; background-color: @orange; }
 
 #search { margin-left: 10px; padding: 0 0 0 20px; width: 280px; height: 36px; position: absolute; bottom: 0; right: 10px; background: @beige-lighter url(/images/bg_search.png) bottom left repeat-x; .border-radius(5px, 5px, 0, 0); .box-shadow(0 -1px 1px rgba(0,0,0,.05)); }
 #search form { margin: 0; }
