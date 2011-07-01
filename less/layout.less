@@ -25,7 +25,7 @@
 ================================================== */
 body { color: @main-gray; background: #f9f5eb url(/images/bg_main.png); }
 a, a:active, a:visited { text-decoration: none; color: @link-color; -webkit-transition: color 0.3s linear; }
-a:hover { text-decoration: underline; color: @link-hover-color; }
+a:hover { color: @link-hover-color; }
 
 /* ---------------------------------------------------------------------------------------------
 
@@ -46,19 +46,20 @@ a:hover { text-decoration: underline; color: @link-hover-color; }
 #primary-nav a { padding: 11px 10px 7px 10px; display: block; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
 #primary-nav a:hover { text-decoration: none; }
 #primary-nav a.has-drop { padding-right: 23px; background: url(/images/bg_dropdown-arrow.png) 100% 50% no-repeat; }
-#primary-nav li:hover, #primary-nav li.hover, #primary-nav a.has-drop:hover { background-color: #ccc; }
-#primary-nav li ul.dropdown { margin: 0; padding: 5px 0; position: absolute; top: 36px; display: none; background: #ccc; z-index: 3; }
-#primary-nav li ul.dropdown li { margin: 0; clear: left; }
-#primary-nav li ul.dropdown li a { padding: 5px 10px; }
+#primary-nav li:hover, #primary-nav li.hover, #primary-nav a.has-drop:hover { background-color: #fff; .border-radius(5px, 5px, 0, 0); }
+#primary-nav li ul.dropdown { margin: 0; padding: 5px 0; min-width: 205px; position: absolute; top: 36px; display: none; background: @white; .border-radius(0, 0, 5px, 5px); border-bottom: 1px solid #e0dcd3; z-index: 3; }
+#primary-nav li ul.dropdown li { margin: 0; width: 100%; clear: left; }
+#primary-nav li ul.dropdown li a { float: none; display: block; font-family: "BrandonGrotesque-Regular"; }
+#primary-nav li ul.dropdown li a:hover { display: block; background-color: @beige-light; }
 
-#search { margin-left: 10px; padding: 0 0 0 20px; width: 280px; height: 36px; position: absolute; bottom: 0; right: 10px; background: #fffdf6 url(/images/bg_search.png) bottom left repeat-x; .border-radius(5px, 5px, 0, 0); .box-shadow(0 -1px 1px rgba(0,0,0,.05)); }
+#search { margin-left: 10px; padding: 0 0 0 20px; width: 280px; height: 36px; position: absolute; bottom: 0; right: 10px; background: @beige-lighter url(/images/bg_search.png) bottom left repeat-x; .border-radius(5px, 5px, 0, 0); .box-shadow(0 -1px 1px rgba(0,0,0,.05)); }
 #search form { margin: 0; }
 #search form label { position: absolute; left: -1000em; }
 #search form input { vertical-align: middle; }
 #search form input[type="text"] { margin: 0 16px 0 0; padding: 6px 0; width: 220px; display: inline; font: 12px "ClarendonRoman", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 #search form input[type="text"]:focus {	color: #444; border: none; -moz-box-shadow: none; -webkit-box-shadow: none;	box-shadow: none; } 
 
-#account { padding: 10px 0 0 20px; width: 280px; height: 26px; position: absolute; top: 0; right: 10px; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; background-color: #fffdf6; .border-radius(0, 0, 5px, 5px); .box-shadow(0 1px 1px rgba(0,0,0,.05)); }
+#account { padding: 10px 0 0 20px; width: 280px; height: 26px; position: absolute; top: 0; right: 10px; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; background-color: @beige-lighter; .border-radius(0, 0, 5px, 5px); .box-shadow(0 1px 1px rgba(0,0,0,.05)); }
 #account strong { margin-right: 15px; float: left; font-weight: normal; color: @main-gray; }
 #account ul.nav-tabs { float: left; }
 #account ul.nav-tabs li { margin-right: 4px; }
@@ -79,8 +80,8 @@ a:hover { text-decoration: underline; color: @link-hover-color; }
 #sidebar {  }
 #sidebar-header { margin-bottom: 18px; height: 90px; background-color: #efede8; }
 #sidebar #nodes { }
-#sidebar .node { padding: 10px; height: 200px; /* just for testing */ position: relative; display: block; overflow: hidden; background-color: #fffdf6; border-top: 4px solid #f1ead8; }
-#sidebar .node:first-child { background: #fffdf6 url(/images/bg_node.png) repeat-x; border-top: none; .border-radius(5px, 5px, 0, 0); }
+#sidebar .node { padding: 10px; height: 200px; /* just for testing */ position: relative; display: block; overflow: hidden; background-color: @beige-lighter; border-top: 4px solid #f1ead8; }
+#sidebar .node:first-child { background: @beige-lighter url(/images/bg_node.png) repeat-x; border-top: none; .border-radius(5px, 5px, 0, 0); }
 #sidebar .node:last-child { border-bottom: 1px solid #e0dcd3; .border-radius( 0, 0, 5px, 5px); }
 
 /* ---------------------------------------------------------------------------------------------
@@ -127,6 +128,17 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 /* #Font-Face
 ================================================== */
+@font-face {
+  font-family: 'BrandonGrotesque-Regular';
+  src: url('/css/fonts/brandon/eot/style_187188.eot');
+  src: url('/css/fonts/brandon/eot/style_187188.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/brandon/woff/style_187188.woff') format('woff'),
+       url('/css/fonts/brandon/ttf/style_187188.ttf') format('truetype'),
+       url('/css/fonts/brandon/svg/style_187188.svg#BrandonGrotesque-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'BrandonGrotesque-Bold';
   src: url('/css/fonts/brandon/eot/style_187190.eot');
