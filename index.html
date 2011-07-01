@@ -41,36 +41,44 @@
           <li>
             <a href="#" class="has-drop">Tequilas</a>
             <ul class="dropdown">
-            	<li>
-            		<a href="#">Browse Brands</a>
-            	</li>
-            	<li>
-            		<a href="#">Top Rated</a>
-            	</li>
-            	<li>
-            		<a href="#">Best Buys</a>
-            	</li>
+            	<li><a href="#">Browse Brands</a></li>
+            	<li><a href="#">Top Rated</a></li>
+            	<li><a href="#">Best Buys</a></li>
             </ul>
           </li>
           <li>
             <a href="#" class="has-drop">Tequila Experts</a>
+            <ul class="dropdown">
+            	<li><a href="#">Meet Our Experts</a></li>
+            	<li><a href="#">Expert Recommendations</a></li>
+            </ul>
           </li>
           <li>
             <a href="#" class="has-drop">Bars &amp; Retailers</a>
+            <ul class="dropdown">
+            	<li><a href="#">Browse Bars</a></li>
+            	<li><a href="#">Browse Retailers</a></li>
+            </ul>
           </li>
           <li>
             <a href="#">Blog</a>
           </li>
           <li>
             <a href="#" class="has-drop">Become an Expert</a>
+            <ul class="dropdown">
+            	<li><a href="#">Tasting &amp; Events</a></li>
+            	<li><a href="#">Tequila School</a></li>
+            </ul>
           </li>
         </ul>
-        <form action="/search/" method="post" id="search" role="search">
-					<label for="s">Search</label>
-					<input type="text" name="search" id="search" value="Search" />
-					<button>Go</button>
-				</form>
       </nav>
+      <div id="search">
+        <form action="/search/" method="post" role="search">
+					<label for="q">Search</label>
+					<input type="text" name="q" value="" title="Search by Name, Brand, NOM..."/>
+					<input type="image" id="search-btn" src="/images/btn_search-btn.png" alt="Go" />
+				</form>
+      </div> <!-- /#search -->
       <div id="account">
         <strong>Ready to start?</strong>
         <ul class="nav-tabs">

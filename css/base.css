@@ -140,7 +140,7 @@ ul.nav-tabs li { float: left; list-style: none; margin: 0; padding: 0; }
 ul.nav-tabs li a { float: left; display: block; }
 
 /* Clearfix for Tabs  */
-ul.nav-tabs:before, ul.tabs:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+ul.nav-tabs:before, ul.nav-tabs:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 ul.nav-tabs:after { clear: both; }
 ul.nav-tabs { zoom: 1; }
 

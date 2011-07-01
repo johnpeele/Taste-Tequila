@@ -23,7 +23,7 @@
 
 /* #Site Styles
 ================================================== */
-body { background: #f9f5eb url(/images/bg_main.png); }
+body { color: @main-gray; background: #f9f5eb url(/images/bg_main.png); }
 a, a:active, a:visited { text-decoration: none; color: @link-color; -webkit-transition: color 0.3s linear; }
 a:hover { text-decoration: underline; color: @link-hover-color; }
 
@@ -33,7 +33,7 @@ a:hover { text-decoration: underline; color: @link-hover-color; }
 
 --------------------------------------------------------------------------------------------- */
 #header-wrapper { background: url(/images/bg_header-wrapper.png) repeat-x; }
-#header-wrapper header { height: 108px; }
+#header-wrapper header { height: 108px; position: relative; }
 
 #identity { margin-left: 10px; }
 #identity h1 { margin: 0; width: 320px; height: 72px; }
@@ -41,15 +41,28 @@ a:hover { text-decoration: underline; color: @link-hover-color; }
 #identity h2 { display: none; }
 
 #primary-nav { margin: 0 10px; height: 36px; }
-#primary-nav ul.nav-tabs { float: left; position: relative; }
+#primary-nav ul.nav-tabs { position: relative; }
 #primary-nav li { margin-right: 5px; }
 #primary-nav a { padding: 11px 10px 7px 10px; display: block; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
 #primary-nav a:hover { text-decoration: none; }
 #primary-nav a.has-drop { padding-right: 23px; background: url(/images/bg_dropdown-arrow.png) 100% 50% no-repeat; }
 #primary-nav li:hover, #primary-nav li.hover, #primary-nav a.has-drop:hover { background-color: #ccc; }
-#primary-nav li ul.dropdown { margin: 0; padding: 5px 0; width: 120px; position: absolute; top: 36px; display: none; background: #ccc; z-index: 3; }
+#primary-nav li ul.dropdown { margin: 0; padding: 5px 0; position: absolute; top: 36px; display: none; background: #ccc; z-index: 3; }
 #primary-nav li ul.dropdown li { margin: 0; clear: left; }
-#primary-nav li ul.dropdown li a { padding: 5px 10px; font-size: 11px; }
+#primary-nav li ul.dropdown li a { padding: 5px 10px; }
+
+#search { margin-left: 10px; padding: 0 0 0 20px; width: 280px; height: 36px; position: absolute; bottom: 0; right: 10px; background: #fffdf6 url(/images/bg_search.png) bottom left repeat-x; .border-radius(5px, 5px, 0, 0); .box-shadow(0 -1px 1px rgba(0,0,0,.05)); }
+#search form { margin: 0; }
+#search form label { position: absolute; left: -1000em; }
+#search form input { vertical-align: middle; }
+#search form input[type="text"] { margin: 0 16px 0 0; padding: 6px 0; width: 220px; display: inline; font: 12px "ClarendonRoman", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
+#search form input[type="text"]:focus {	color: #444; border: none; -moz-box-shadow: none; -webkit-box-shadow: none;	box-shadow: none; } 
+
+#account { padding: 10px 0 0 20px; width: 280px; height: 26px; position: absolute; top: 0; right: 10px; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; background-color: #fffdf6; .border-radius(0, 0, 5px, 5px); .box-shadow(0 1px 1px rgba(0,0,0,.05)); }
+#account strong { margin-right: 15px; float: left; font-weight: normal; color: @main-gray; }
+#account ul.nav-tabs { float: left; }
+#account ul.nav-tabs li { margin-right: 4px; }
+#account ul.nav-tabs em { margin-left: 4px; vertical-align: top; font: italic 12px Georgia, "Times New Roman", Times, serif; line-height: 0.9; text-transform: none; color: @orange; }
 
 /* ---------------------------------------------------------------------------------------------
 
@@ -107,6 +120,38 @@ footer p { margin-right: 10px; }
        url('/css/fonts/brandon/svg/style_187190.svg#BrandonGrotesque-Bold') format('svg');
 }
 
+@font-face {
+  font-family: 'ClarendonBold';
+  src: url('/css/fonts/clarendon/clarendonltstd-bold-webfont.eot');
+  src: url('/css/fonts/clarendon/clarendonltstd-bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/clarendon/clarendonltstd-bold-webfont.woff') format('woff'),
+       url('/css/fonts/clarendon/clarendonltstd-bold-webfont.ttf') format('truetype'),
+       url('/css/fonts/clarendon/clarendonltstd-bold-webfont.svg#ClarendonBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClarendonLight';
+  src: url('/css/fonts/clarendon/clarendonltstd-light-webfont.eot');
+  src: url('/css/fonts/clarendon/clarendonltstd-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/clarendon/clarendonltstd-light-webfont.woff') format('woff'),
+       url('/css/fonts/clarendon/clarendonltstd-light-webfont.ttf') format('truetype'),
+       url('/css/fonts/clarendon/clarendonltstd-light-webfont.svg#ClarendonLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ClarendonRoman';
+  src: url('/css/fonts/clarendon/clarendonltstd-webfont.eot');
+  src: url('/css/fonts/clarendon/clarendonltstd-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/css/fonts/clarendon/clarendonltstd-webfont.woff') format('woff'),
+       url('/css/fonts/clarendon/clarendonltstd-webfont.ttf') format('truetype'),
+       url('/css/fonts/clarendon/clarendonltstd-webfont.svg#ClarendonRoman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* #Browser Debugging
 ================================================== */
