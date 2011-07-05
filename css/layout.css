@@ -28,6 +28,7 @@
 /* #Site Styles
 ================================================== */
 body {
+  font-family: "ClarendonLight", Georgia, "Times New Roman", Times, serif;
   color: #5d5b57;
   background: #f9f5eb url(/images/bg_main.png);
 }
@@ -37,7 +38,18 @@ a, a:active, a:visited {
   -webkit-transition: color 0.3s linear;
 }
 a:hover {
-  color: #7f3500;
+  text-decoration: underline;
+  color: #b24a00;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "SteelfishBold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #5d5b57;
 }
 /* ---------------------------------------------------------------------------------------------
 
@@ -257,18 +269,23 @@ a:hover {
 #content {
   padding: 18px 0 36px;
 }
-/* Main ---------------------------------------- */
-#main-header {
+#content-header {
   margin-bottom: 18px;
+}
+#content-header .promo {
   height: 90px;
+  color: #999999;
   background-color: #efede8;
+}
+/* Main ---------------------------------------- */
+#main {
+  height: 200px;
+}
+#main header.subnav h2 {
+  margin-bottom: 12px;
+  font-size: 40px;
 }
 /* Sidebar ---------------------------------------- */
-#sidebar-header {
-  margin-bottom: 18px;
-  height: 90px;
-  background-color: #efede8;
-}
 #sidebar .node {
   padding: 10px;
   height: 200px;
@@ -356,6 +373,43 @@ footer p {
 }
 /* #Page Styles
 ================================================== */
+/* ---------------------------------------------------------------------------------------------
+
+	community page
+
+--------------------------------------------------------------------------------------------- */
+#activity-feed .feed-item {
+  padding: 0 55px 25px 60px;
+  background: url(/images/bg_feed-item.png) bottom left no-repeat;
+}
+#activity-feed .feed-item > a img {
+  margin-left: -60px;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  float: left;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#activity-feed .feed-item p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-family: "ClarendonRoman";
+  color: #999999;
+}
+#activity-feed .feed-item quote {
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: #5d5b57;
+}
+#activity-feed .feed-item quote a {
+  color: #5d5b57;
+}
 /* #Media Queries
 ================================================== */
 /* iPad Portrait/Browser ---------------------------------------- */

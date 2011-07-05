@@ -23,9 +23,11 @@
 
 /* #Site Styles
 ================================================== */
-body { color: @main-gray; background: #f9f5eb url(/images/bg_main.png); }
+body { font-family: "ClarendonLight", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: #f9f5eb url(/images/bg_main.png); }
 a, a:active, a:visited { text-decoration: none; color: @link-color; -webkit-transition: color 0.3s linear; }
-a:hover { color: @link-hover-color; }
+a:hover { text-decoration: underline; color: @link-hover-color; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; color: @main-gray; }
 
 /* ---------------------------------------------------------------------------------------------
 
@@ -71,14 +73,15 @@ a:hover { color: @link-hover-color; }
 
 --------------------------------------------------------------------------------------------- */
 #content { padding: 18px 0 36px; }
+#content-header { margin-bottom: 18px; }
+#content-header .promo { height: 90px; color: @gray-light; background-color: #efede8; }
 
 /* Main ---------------------------------------- */
-#main {  }
-#main-header { margin-bottom: 18px; height: 90px; background-color: #efede8; }
+#main { height: 200px; }
+#main header.subnav h2 { margin-bottom: 12px; font-size: 40px; }
 
 /* Sidebar ---------------------------------------- */
 #sidebar {  }
-#sidebar-header { margin-bottom: 18px; height: 90px; background-color: #efede8; }
 #sidebar #nodes { }
 #sidebar .node { padding: 10px; height: 200px; /* just for testing */ position: relative; display: block; overflow: hidden; background-color: @beige-lighter; border-top: 4px solid #f1ead8; }
 #sidebar .node:first-child { background: @beige-lighter url(/images/bg_node.png) repeat-x; border-top: none; .border-radius(5px, 5px, 0, 0); }
@@ -100,6 +103,19 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 /* #Page Styles
 ================================================== */
+
+/* ---------------------------------------------------------------------------------------------
+
+	community page
+
+--------------------------------------------------------------------------------------------- */
+#activity-feed { }
+#activity-feed .feed-item { padding: 0 55px 25px 60px; background: url(/images/bg_feed-item.png) bottom left no-repeat; }
+#activity-feed .feed-item > a img { margin-left: -60px; padding: 5px; width: 40px; height: 40px; float: left; background-color: @white; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
+#activity-feed .feed-item p { margin-bottom: 10px; font-size: 12px; font-family: "ClarendonRoman"; color: @gray-light; }
+#activity-feed .feed-item quote { font-size: 18px; line-height: 1; letter-spacing: -0.045em; color: @main-gray; }
+#activity-feed .feed-item quote a { color: @main-gray; }
+
 
 /* #Media Queries
 ================================================== */
