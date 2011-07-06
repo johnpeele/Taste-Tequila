@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 #content-header .promo { height: 90px; color: @gray-light; background-color: #efede8; }
 
 /* Main ---------------------------------------- */
-#main { height: 200px; }
+#main { }
 #main header.subnav h2 { margin-bottom: 12px; font-size: 40px; }
 
 /* Sidebar ---------------------------------------- */
@@ -110,11 +110,24 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 --------------------------------------------------------------------------------------------- */
 #activity-feed { }
-#activity-feed .feed-item { padding: 0 55px 25px 60px; background: url(/images/bg_feed-item.png) bottom left no-repeat; }
+#activity-feed .feed-item { padding: 25px 0 25px 60px; background: url(/images/bg_feed-item.png) bottom left no-repeat; }
+#activity-feed .feed-item:first-of-type { padding-top: 0; }
 #activity-feed .feed-item > a img { margin-left: -60px; padding: 5px; width: 40px; height: 40px; float: left; background-color: @white; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
+#activity-feed .feed-item .act { padding-right: 55px; background-position: top right; background-repeat: no-repeat; }
 #activity-feed .feed-item p { margin-bottom: 10px; font-size: 12px; font-family: "ClarendonRoman"; color: @gray-light; }
 #activity-feed .feed-item quote { font-size: 18px; line-height: 1; letter-spacing: -0.045em; color: @main-gray; }
 #activity-feed .feed-item quote a { color: @main-gray; }
+
+#activity-feed .feed-item.comment > a, #activity-feed .feed-item.review > a { margin-left: -60px; padding-right: 10px; width: 50px; height: 50px; float: left; background: url(/images/bg_feed-avatar-connector.png) 100% 50% no-repeat; }
+#activity-feed .feed-item.comment > a img, #activity-feed .feed-item.review > a img { margin-left: 0; }
+#activity-feed .feed-item.comment .act, #activity-feed .feed-item.review .act { padding-left: 120px; }
+#activity-feed .feed-item.comment .act > a img, #activity-feed .feed-item.review .act > a img { margin-left: -120px; padding: 5px; width: 100px; height: 100px; float: left; background-color: @white; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
+
+#activity-feed .feed-item.comment .act { background-image: url(/images/icon_comment.png); }
+#activity-feed .feed-item.review .act { background-image: url(/images/icon_review-1.png); }
+#activity-feed .feed-item.event .act { background-image: url(/images/icon_event.png); }
+#activity-feed .feed-item.achievement .act { background-image: url(/images/icon_achievement-1.png); }
+#activity-feed .feed-item.news .act { background-image: url(/images/icon_news-1.png); }
 
 
 /* #Media Queries
