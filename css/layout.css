@@ -372,9 +372,11 @@ h6 {
 }
 #sidebar .node .ratings-list .ratings a:hover {
   text-decoration: none;
-  background-color: #FFF;
 }
 #sidebar .node .ratings-list .ratings a.rating-expert {
+  color: #761a02;
+  background-color: #f05931;
+  border-color: #cb3007;
   -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 0;
   -webkit-border-bottom-left-radius: 5px;
@@ -388,7 +390,15 @@ h6 {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
+#sidebar .node .ratings-list .ratings a.rating-community {
+  color: #845e00;
+  background-color: #fcc12c;
+  border-color: #d39f1d;
+}
 #sidebar .node .ratings-list .ratings a.rating-personal {
+  color: #969601;
+  background-color: #ffff99;
+  border-color: #e1e171;
   -webkit-border-top-right-radius: 5px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 0;
