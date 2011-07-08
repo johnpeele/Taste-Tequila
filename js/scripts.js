@@ -12,23 +12,27 @@ $(document).ready(function() {
   
   /* Nav Dropdowns on hover
 	================================================== */
-  $('#primary-nav li').hover(
-      function() { $(this).addClass('hover').find('ul.dropdown').show(); },
-      function() { $(this).removeClass('hover').find('ul.dropdown').hide(); }
+  $("#primary-nav li").hover(
+      function() { $(this).addClass("hover").find("ul.dropdown").show(); },
+      function() { $(this).removeClass("hover").find("ul.dropdown").hide(); }
   );
+  
+  /* Tipsy Tooltips
+	================================================== */
+  $("[rel=tipsy]").tipsy({gravity: "w", opacity: 0.7});
 
 	/* Tabs Activiation
 	================================================== */
-	var tabs = $('ul.tabs'),
-	    tabsContent = $('ul.tabs-content');
+	var tabs = $("ul.tabs"),
+	    tabsContent = $("ul.tabs-content");
 	
 	tabs.each(function(i) {
 		//Get all tabs
-		var tab = $(this).find('> li > a');
+		var tab = $(this).find("> li > a");
 		tab.click(function(e) {
 			
-			//Get Location of tab's content
-			var contentLocation = $(this).attr('href') + "Tab";
+			//Get Location of tab"s content
+			var contentLocation = $(this).attr("href") + "Tab";
 			
 			//Let go if not a hashed one
 			if(contentLocation.charAt(0)=="#") {
@@ -36,8 +40,8 @@ $(document).ready(function() {
 				e.preventDefault();
 			
 				//Make Tab Active
-				tab.removeClass('active');
-				$(this).addClass('active');
+				tab.removeClass("active");
+				$(this).addClass("active");
 				
 				//Show Tab Content
 				$(contentLocation).show().siblings().hide();
