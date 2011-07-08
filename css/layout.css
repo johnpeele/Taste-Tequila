@@ -434,6 +434,7 @@ h6 {
   width: 26px;
   float: none;
   display: block;
+  cursor: default;
   font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   background-color: #eeeeee;
@@ -488,6 +489,12 @@ h6 {
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
   border-top-left-radius: 0;
+}
+#sidebar .node .ratings-list .ratings span.rating-personal a {
+  width: auto;
+  float: none;
+  font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #969601;
 }
 /* ---------------------------------------------------------------------------------------------
 
