@@ -23,7 +23,7 @@
 
 /* #Site Styles
 ================================================== */
-body { font-family: "ClarendonLight", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: #f9f5eb url(/images/bg_main.png); }
+body { font-family: "ClarendonFSLight", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: #f9f5eb url(/images/bg_main.png); }
 a, a:active, a:visited { text-decoration: none; color: @link-color; -webkit-transition: all 0.3s linear; }
 a:hover { text-decoration: underline; color: @link-hover-color; }
 
@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 #search form { margin: 0; }
 #search form label { position: absolute; left: -1000em; }
 #search form input { vertical-align: middle; }
-#search form input[type="text"] { margin: 0 16px 0 0; padding: 6px 0; width: 220px; display: inline; font: 12px "ClarendonRoman", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
+#search form input[type="text"] { margin: 0 16px 0 0; padding: 6px 0; width: 220px; display: inline; font: 12px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 #search form input[type="text"]:focus {	color: #444; border: none; -moz-box-shadow: none; -webkit-box-shadow: none;	box-shadow: none; } 
 
 #account { padding: 10px 0 0 20px; width: 280px; height: 26px; position: absolute; top: 0; right: 10px; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; background-color: @beige-lighter; .border-radius(0, 0, 5px, 5px); .box-shadow(0 1px 1px rgba(0,0,0,.05)); }
@@ -104,12 +104,12 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 #sidebar .node .ratings-list { margin: 0; }
 #sidebar .node .ratings-list li { padding-bottom: 10px; height: 54px; overflow: hidden; background: url(/images/bg_feed-item.png) bottom center no-repeat; }
 #sidebar .node .ratings-list li:last-child { background: none; }
-#sidebar .node .ratings-list span { margin-right: 10px; width: 18px; height: 52px; float: left; font: 18px "ClarendonRoman", Georgia, "Times New Roman", Times, serif; text-align: center; background-color: @beige-light; border: 1px solid @beige; .rounded(5px); }
-#sidebar .node .ratings-list a { width: 205px; float: left; font: 14px "ClarendonRoman", Georgia, "Times New Roman", Times, serif; }
+#sidebar .node .ratings-list span.position { margin-right: 10px; width: 18px; height: 52px; float: left; font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-align: center; background-color: @beige-light; border: 1px solid @beige; .rounded(5px); }
+#sidebar .node .ratings-list a { width: 205px; float: left; font: 14px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; }
 #sidebar .node .ratings-list .ratings { width: 28px; height: 54px; float: right; }
 #sidebar .node .ratings-list .ratings span { margin-right: 2px; margin-bottom: 1px; width: 26px; float: none; display: block; cursor: default; font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; background-color: @gray-lighter; border: 1px solid @gray-light; }
 #sidebar .node .ratings-list .ratings span.rating-expert { height: 15px; color: #761a02; text-shadow: 0 1px 0 rgba(255,255,255,.6); background-color: #f05931; border-color: #cb3007; .border-radius(5px, 5px, 0, 0); }
-#sidebar .node .ratings-list .ratings span.rating-community { height: 16px; color: #845e00; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #fcc12c; border-color: #d39f1d; .rounded(0); }
+#sidebar .node .ratings-list .ratings span.rating-community { height: 16px; color: #845e00; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #fcc12c; border-color: #d39f1d; .border-radius(0); }
 #sidebar .node .ratings-list .ratings span.rating-personal { margin-bottom: 0; height: 15px; text-shadow: 0 1px 0 rgb(255,255,255); color: #969601; background-color: #ffff99; border-color: #e1e171; .border-radius(0, 0, 5px, 5px); }
 #sidebar .node .ratings-list .ratings span.rating-personal a { width: auto; float: none; font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #969601; }
 
@@ -140,7 +140,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #activity-feed .feed-item:first-of-type { padding-top: 0; }
 #activity-feed .feed-item > a img { margin-left: -60px; padding: 5px; width: 40px; height: 40px; float: left; background-color: @white; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
 #activity-feed .feed-item .act { padding-right: 55px; background-position: top right; background-repeat: no-repeat; }
-#activity-feed .feed-item p { margin-bottom: 10px; font-size: 12px; font-family: "ClarendonRoman"; color: @gray-light; }
+#activity-feed .feed-item p { margin-bottom: 10px; font-size: 12px; font-family: "ClarendonFSMedium"; color: @gray-light; }
 #activity-feed .feed-item quote { font-size: 18px; line-height: 1; letter-spacing: -0.045em; color: @main-gray; }
 #activity-feed .feed-item quote a { color: @main-gray; }
 
@@ -218,53 +218,53 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 @font-face {
   font-family: 'SteelfishRegular';
-  src: url('/css/fonts/steelfish/steelfish_rg-webfont.eot?') format('eot'),
-       url('/css/fonts/steelfish/steelfish_rg-webfont.woff') format('woff'),
-       url('/css/fonts/steelfish/steelfish_rg-webfont.ttf') format('truetype'),
-       url('/css/fonts/steelfish/steelfish_rg-webfont.svg#webfontzUlD70Vs') format('svg');
+  src: url('/css/fonts/steelfish/regular/steelfish_rg-webfont.eot?') format('eot'),
+       url('/css/fonts/steelfish/regular/steelfish_rg-webfont.woff') format('woff'),
+       url('/css/fonts/steelfish/regular/steelfish_rg-webfont.ttf') format('truetype'),
+       url('/css/fonts/steelfish/regular/steelfish_rg-webfont.svg#webfontzUlD70Vs') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'SteelfishBold';
-  src: url('/css/fonts/steelfish/steelfish_bd-webfont.eot?') format('eot'),
-       url('/css/fonts/steelfish/steelfish_bd-webfont.woff') format('woff'),
-       url('/css/fonts/steelfish/steelfish_bd-webfont.ttf') format('truetype'),
-       url('/css/fonts/steelfish/steelfish_bd-webfont.svg#SteelfishBold') format('svg');
+  src: url('/css/fonts/steelfish/bold/steelfish_bd-webfont.eot?') format('eot'),
+       url('/css/fonts/steelfish/bold/steelfish_bd-webfont.woff') format('woff'),
+       url('/css/fonts/steelfish/bold/steelfish_bd-webfont.ttf') format('truetype'),
+       url('/css/fonts/steelfish/bold/steelfish_bd-webfont.svg#SteelfishBold') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClarendonBold';
-  src: url('/css/fonts/clarendon/clarendonltstd-bold-webfont.eot');
-  src: url('/css/fonts/clarendon/clarendonltstd-bold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/css/fonts/clarendon/clarendonltstd-bold-webfont.woff') format('woff'),
-       url('/css/fonts/clarendon/clarendonltstd-bold-webfont.ttf') format('truetype'),
-       url('/css/fonts/clarendon/clarendonltstd-bold-webfont.svg#ClarendonBold') format('svg');
+  font-family: 'ClarendonFSBold';
+  src: url('/css/fonts/clarendonfs/bold/Clarendon-Bold-webfont.eot');
+  src: url('/css/fonts/clarendonfs/bold/Clarendon-Bold-webfont.eot?iefix') format('eot'),
+       url('/css/fonts/clarendonfs/bold/Clarendon-Bold-webfont.woff') format('woff'),
+       url('/css/fonts/clarendonfs/bold/Clarendon-Bold-webfont.ttf') format('truetype'),
+       url('/css/fonts/clarendonfs/bold/Clarendon-Bold-webfont.svg#webfont') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClarendonLight';
-  src: url('/css/fonts/clarendon/clarendonltstd-light-webfont.eot');
-  src: url('/css/fonts/clarendon/clarendonltstd-light-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/css/fonts/clarendon/clarendonltstd-light-webfont.woff') format('woff'),
-       url('/css/fonts/clarendon/clarendonltstd-light-webfont.ttf') format('truetype'),
-       url('/css/fonts/clarendon/clarendonltstd-light-webfont.svg#ClarendonLight') format('svg');
+  font-family: 'ClarendonFSLight';
+  src: url('/css/fonts/clarendonfs/light/Clarendon-Light-webfont.eot');
+  src: url('/css/fonts/clarendonfs/light/Clarendon-Light-webfont.eot?iefix') format('eot'),
+       url('/css/fonts/clarendonfs/light/Clarendon-Light-webfont.woff') format('woff'),
+       url('/css/fonts/clarendonfs/light/Clarendon-Light-webfont.ttf') format('truetype'),
+       url('/css/fonts/clarendonfs/light/Clarendon-Light-webfont.svg#webfontI7XVJ1Zh') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ClarendonRoman';
-  src: url('/css/fonts/clarendon/clarendonltstd-webfont.eot');
-  src: url('/css/fonts/clarendon/clarendonltstd-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/css/fonts/clarendon/clarendonltstd-webfont.woff') format('woff'),
-       url('/css/fonts/clarendon/clarendonltstd-webfont.ttf') format('truetype'),
-       url('/css/fonts/clarendon/clarendonltstd-webfont.svg#ClarendonRoman') format('svg');
+  font-family: 'ClarendonFSMedium';
+  src: url('/css/fonts/clarendonfs/medium/Clarendon-Medium-webfont.eot');
+  src: url('/css/fonts/clarendonfs/medium/Clarendon-Medium-webfont.eot?iefix') format('eot'),
+       url('/css/fonts/clarendonfs/medium/Clarendon-Medium-webfont.woff') format('woff'),
+       url('/css/fonts/clarendonfs/medium/Clarendon-Medium-webfont.ttf') format('truetype'),
+       url('/css/fonts/clarendonfs/medium/Clarendon-Medium-webfont.svg#webfontXqIDF9Di') format('svg');
   font-weight: normal;
   font-style: normal;
 }
