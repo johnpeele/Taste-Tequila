@@ -14,6 +14,7 @@ $(document).ready(function() {
 	================================================== */
   $("#sidebar .node:last-child").addClass("lastnode");
   $("#sidebar .ratings-list li:last-child").addClass("lastrating");
+  $("#sidebar .badge-list li:nth-child(5n)").addClass("lastbadge");
   
   /* Nav Dropdowns on hover
 	================================================== */
@@ -25,6 +26,7 @@ $(document).ready(function() {
   /* Tipsy Tooltips
 	================================================== */
   $("[rel=tipsy]").tipsy({gravity: "w", opacity: 0.7});
+  $("[rel=tipsy-top]").tipsy({gravity: "s", opacity: 0.7});
 
 	/* Tabs Activiation
 	================================================== */

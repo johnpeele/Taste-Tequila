@@ -163,7 +163,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #s-profile #content { padding-top: 36px; }
 #profile { margin-bottom: 36px; padding: 20px; position: relative; background: @beige-lighter url(/images/bg_profile.jpg) no-repeat; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
 #profile img.avatar { padding: 5px; width: 90px; height: 90px; float: left; background-color: @white; .rounded(5px); .box-shadow(0 1px 2px rgba(0,0,0,.4)); }
-#profile .tape { width: 42px; height: 29px; position: absolute; top: 12px; left: 10px; display: block; background: url(/images/bg_avatar-tape.png) no-repeat; z-index: 1000; }
+#profile .tape { width: 42px; height: 29px; position: absolute; top: 12px; left: 10px; display: block; background: url(/images/bg_avatar-tape.png) no-repeat; z-index: 2; }
 #profile #details { padding: 0 20px 0 20px; width: 280px; float: left; }
 #profile #details h1 { margin-bottom: 10px; font-size: 34px; line-height: 1.2; }
 #profile #details ul { padding-left: 30px; font-size: 14px; }
@@ -171,6 +171,13 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #profile #details ul.contact { background: url(/images/bg_profile-details-contact.png) no-repeat; }
 #profile #details li { margin-bottom: 2px; padding-bottom: 2px; background: url(/images/bg_profile-details-divider.png) bottom right no-repeat; }
 #profile #member-since { padding-top: 18px; width: 144px; height: 36px; position: absolute; right: 10px; text-align: center; font: 18px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; text-transform: uppercase; background: url(/images/bg_profile-member-since.png) no-repeat; .rotate(-10deg); }
+
+#sidebar .node .badge-list { }
+#sidebar .node .badge-list li { margin: 0 10px 10px 0; width: 48px; height: 48px; float: left; }
+#sidebar .node .badge-list li:nth-child(5n), #sidebar .node .badge-list li.lastbadge { margin-right: 0; }
+#sidebar .node .badge-list li img { width: 47px; height: 47px; border: 1px solid @gray-lighter; .rounded(5px); }
+
+#sidebar .node.bio p { font-size: 12px; }
 
 /* #Media Queries
 ================================================== */

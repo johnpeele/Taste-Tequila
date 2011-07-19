@@ -806,7 +806,7 @@ footer p {
   left: 10px;
   display: block;
   background: url(/images/bg_avatar-tape.png) no-repeat;
-  z-index: 1000;
+  z-index: 2;
 }
 #profile #details {
   padding: 0 20px 0 20px;
@@ -847,6 +847,27 @@ footer p {
   -moz-transform: rotate(-10deg);
   -o-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
+}
+#sidebar .node .badge-list li {
+  margin: 0 10px 10px 0;
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+#sidebar .node .badge-list li:nth-child(5n), #sidebar .node .badge-list li.lastbadge {
+  margin-right: 0;
+}
+#sidebar .node .badge-list li img {
+  width: 47px;
+  height: 47px;
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#sidebar .node.bio p {
+  font-size: 12px;
 }
 /* #Media Queries
 ================================================== */
