@@ -122,6 +122,14 @@
   	-moz-transition: @transition;
   	transition: @transition;
   }
+  
+  // Transformations
+  .rotate(@degrees) {
+    -webkit-transform: rotate(@degrees);
+    -moz-transform: rotate(@degrees);
+    -o-transform: rotate(@degrees);
+    -ms-transform: rotate(@degrees);
+  }
 
   // CSS3 Content Columns
   .content-columns(@columnCount, @columnGap: 20px) {
