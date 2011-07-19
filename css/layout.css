@@ -532,7 +532,7 @@ h6 {
   border-radius: 5px 5px 0 0;
   -webkit-background-clip: padding-box;
 }
-#sidebar .node:last-child {
+#sidebar .node:last-child, #sidebar .node.lastnode {
   height: 200px;
   /* just for testing */
   border-bottom: 1px solid #e0dcd3;
@@ -553,7 +553,7 @@ h6 {
   overflow: hidden;
   background: url(/images/bg_feed-item.png) bottom center no-repeat;
 }
-#sidebar .node .ratings-list li:last-child {
+#sidebar .node .ratings-list li:last-child, #sidebar .node .ratings-list li.lastrating {
   background: none;
 }
 #sidebar .node .ratings-list span.position {
@@ -687,7 +687,7 @@ footer p {
   padding: 25px 0 25px 60px;
   background: url(/images/bg_feed-item.png) bottom left no-repeat;
 }
-#activity-feed .feed-item:first-of-type {
+#activity-feed .feed-item:first-child {
   padding-top: 0;
 }
 #activity-feed .feed-item > a img {

@@ -98,12 +98,12 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 #sidebar #nodes { }
 #sidebar .node { padding: 10px; position: relative; display: block; overflow: hidden; background-color: @beige-lighter; border-top: 4px solid #f1ead8; }
 #sidebar .node:first-child { background: @beige-lighter url(/images/bg_node.png) repeat-x; border-top: none; .border-radius(5px, 5px, 0, 0); }
-#sidebar .node:last-child { height: 200px; /* just for testing */ border-bottom: 1px solid #e0dcd3; .border-radius( 0, 0, 5px, 5px); }
+#sidebar .node:last-child, #sidebar .node.lastnode { height: 200px; /* just for testing */ border-bottom: 1px solid #e0dcd3; .border-radius( 0, 0, 5px, 5px); }
 #sidebar .node h3 { font-size: 27px; }
 
 #sidebar .node .ratings-list { margin: 0; }
 #sidebar .node .ratings-list li { padding-bottom: 10px; height: 54px; overflow: hidden; background: url(/images/bg_feed-item.png) bottom center no-repeat; }
-#sidebar .node .ratings-list li:last-child { background: none; }
+#sidebar .node .ratings-list li:last-child, #sidebar .node .ratings-list li.lastrating { background: none; }
 #sidebar .node .ratings-list span.position { margin-right: 10px; width: 18px; height: 52px; float: left; font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-align: center; background-color: @beige-light; border: 1px solid @beige; .rounded(5px); }
 #sidebar .node .ratings-list a { width: 205px; float: left; font: 14px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; }
 #sidebar .node .ratings-list .ratings { width: 28px; height: 54px; float: right; }
@@ -137,7 +137,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 --------------------------------------------------------------------------------------------- */
 #activity-feed { }
 #activity-feed .feed-item { padding: 25px 0 25px 60px; background: url(/images/bg_feed-item.png) bottom left no-repeat; }
-#activity-feed .feed-item:first-of-type { padding-top: 0; }
+#activity-feed .feed-item:first-child { padding-top: 0; }
 #activity-feed .feed-item > a img { margin-left: -60px; padding: 5px; width: 40px; height: 40px; float: left; background-color: @white; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
 #activity-feed .feed-item .act { padding-right: 55px; background-position: top right; background-repeat: no-repeat; }
 #activity-feed .feed-item p { margin-bottom: 10px; font-size: 12px; font-family: "ClarendonFSMedium"; color: @gray-light; }

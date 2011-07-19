@@ -10,6 +10,11 @@
 
 $(document).ready(function() {
   
+  /* Polyfills for CSS type selectors
+	================================================== */
+  $("#sidebar .node:last-child").addClass("lastnode");
+  $("#sidebar .ratings-list li:last-child").addClass("lastrating");
+  
   /* Nav Dropdowns on hover
 	================================================== */
   $("#primary-nav li").hover(
