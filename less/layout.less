@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 #sidebar #nodes { }
 #sidebar .node { padding: 10px; position: relative; display: block; overflow: hidden; background-color: @beige-lighter; border-top: 4px solid #f1ead8; }
 #sidebar .node:first-child { background: @beige-lighter url(/images/bg_node.png) repeat-x; border-top: none; .border-radius(5px, 5px, 0, 0); }
-#sidebar .node:last-child, #sidebar .node.lastnode { height: 200px; /* just for testing */ border-bottom: 1px solid #e0dcd3; .border-radius( 0, 0, 5px, 5px); }
+#sidebar .node:last-child, #sidebar .node.lastnode { border-bottom: 1px solid #e0dcd3; .border-radius( 0, 0, 5px, 5px); }
 #sidebar .node h3 { font-size: 27px; }
 
 #sidebar .node .ratings-list { margin: 0; }
@@ -178,6 +178,12 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #sidebar .node .badge-list li img { width: 47px; height: 47px; border: 1px solid @gray-lighter; .rounded(5px); }
 
 #sidebar .node.bio p { font-size: 12px; }
+
+#sidebar .node.highest-rated .ratings-list li,
+#sidebar .node.highest-rated .ratings-list .ratings { height: auto; }
+#sidebar .node.highest-rated .ratings-list .ratings span.rating-expert,
+#sidebar .node.highest-rated .ratings-list .ratings span.rating-community,
+#sidebar .node.highest-rated .ratings-list .ratings span.rating-personal { .rounded(5px); }
 
 /* #Media Queries
 ================================================== */

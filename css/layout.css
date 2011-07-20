@@ -533,8 +533,6 @@ h6 {
   -webkit-background-clip: padding-box;
 }
 #sidebar .node:last-child, #sidebar .node.lastnode {
-  height: 200px;
-  /* just for testing */
   border-bottom: 1px solid #e0dcd3;
   -webkit-border-radius: 0 0 5px 5px;
   -moz-border-radius: 0 0 5px 5px;
@@ -868,6 +866,15 @@ footer p {
 }
 #sidebar .node.bio p {
   font-size: 12px;
+}
+#sidebar .node.highest-rated .ratings-list li, #sidebar .node.highest-rated .ratings-list .ratings {
+  height: auto;
+}
+#sidebar .node.highest-rated .ratings-list .ratings span.rating-expert, #sidebar .node.highest-rated .ratings-list .ratings span.rating-community, #sidebar .node.highest-rated .ratings-list .ratings span.rating-personal {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
 }
 /* #Media Queries
 ================================================== */
