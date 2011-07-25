@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 #search form { margin: 0; }
 #search form label { position: absolute; left: -1000em; }
 #search form input { vertical-align: middle; }
-#search form input[type="text"] { margin: 0 16px 0 0; padding: 6px 0; width: 220px; display: inline; font: 12px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
+#search form input[type="text"] { margin: 0 17px 0 0; padding: 6px 0; width: 220px; display: inline; font: 12px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; color: @main-gray; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 #search form input[type="text"]:focus {	color: #444; border: none; -moz-box-shadow: none; -webkit-box-shadow: none;	box-shadow: none; } 
 
 #account { padding: 10px 0 0 20px; width: 280px; height: 26px; position: absolute; top: 0; right: 10px; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; background-color: @beige-lighter; .border-radius(0, 0, 5px, 5px); .box-shadow(0 1px 1px rgba(0,0,0,.05)); }
@@ -91,7 +91,8 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 
 /* Main ---------------------------------------- */
 #main { }
-#main header.subnav h2 { margin-bottom: 12px; font-size: 40px; }
+#main header.title h2 { margin-bottom: 12px; font-size: 40px; }
+#main header.subnav { }
 
 /* Sidebar ---------------------------------------- */
 #sidebar {  }
@@ -184,6 +185,17 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #sidebar .node.highest-rated .ratings-list .ratings span.rating-expert,
 #sidebar .node.highest-rated .ratings-list .ratings span.rating-community,
 #sidebar .node.highest-rated .ratings-list .ratings span.rating-personal { .rounded(5px); }
+
+/* ---------------------------------------------------------------------------------------------
+
+	rating page
+
+--------------------------------------------------------------------------------------------- */
+#sidebar .node.lowdown { .rounded(5px); }
+#sidebar .node.lowdown h4 { margin-bottom: 18px; padding-bottom: 10px; font: 16px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_feed-item.png) bottom left no-repeat; }
+#sidebar .node.lowdown img { padding: 5px; width: 90px; height: 90px; float: left; background-color: @white; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
+#sidebar .node.lowdown ul { margin-left: 112px; font: 12px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
+#sidebar .node.lowdown ul strong { font-weight: normal; font-family: "BrandonGrotesque-Bold"; color: @main-gray; }
 
 /* #Media Queries
 ================================================== */

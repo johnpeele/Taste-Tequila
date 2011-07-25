@@ -12,7 +12,8 @@ $(document).ready(function() {
   
   /* Polyfills for CSS type selectors
 	================================================== */
-  $("#sidebar .node:last-child").addClass("lastnode");
+  // $("#sidebar .node:only-child").addClass("onlynode");
+  $("#sidebar .node:last-child").not("#sidebar .node:first-child").addClass("lastnode");
   $("#sidebar .ratings-list li:last-child").addClass("lastrating");
   $("#sidebar .badge-list li:nth-child(5n)").addClass("lastbadge");
   

@@ -436,7 +436,7 @@ h6 {
   vertical-align: middle;
 }
 #search form input[type="text"] {
-  margin: 0 16px 0 0;
+  margin: 0 17px 0 0;
   padding: 6px 0;
   width: 220px;
   display: inline;
@@ -511,7 +511,7 @@ h6 {
   background-color: #efede8;
 }
 /* Main ---------------------------------------- */
-#main header.subnav h2 {
+#main header.title h2 {
   margin-bottom: 12px;
   font-size: 40px;
 }
@@ -875,6 +875,46 @@ footer p {
   -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-background-clip: padding-box;
+}
+/* ---------------------------------------------------------------------------------------------
+
+	rating page
+
+--------------------------------------------------------------------------------------------- */
+#sidebar .node.lowdown {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#sidebar .node.lowdown h4 {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  font: 16px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
+  text-transform: none;
+  background: url(/images/bg_feed-item.png) bottom left no-repeat;
+}
+#sidebar .node.lowdown img {
+  padding: 5px;
+  width: 90px;
+  height: 90px;
+  float: left;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#sidebar .node.lowdown ul {
+  margin-left: 112px;
+  font: 12px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+#sidebar .node.lowdown ul strong {
+  font-weight: normal;
+  font-family: "BrandonGrotesque-Bold";
+  color: #5d5b57;
 }
 /* #Media Queries
 ================================================== */
