@@ -500,7 +500,7 @@ h6 {
 
 --------------------------------------------------------------------------------------------- */
 #content {
-  padding: 18px 0 36px;
+  padding: 36px 0;
 }
 #content-header {
   margin-bottom: 18px;
@@ -681,6 +681,9 @@ footer p {
 	community page
 
 --------------------------------------------------------------------------------------------- */
+#s-community #content {
+  padding-top: 18px;
+}
 #activity-feed .feed-item {
   padding: 25px 0 25px 60px;
   background: url(/images/bg_feed-item.png) bottom left no-repeat;
@@ -768,9 +771,6 @@ footer p {
 	member profile page
 
 --------------------------------------------------------------------------------------------- */
-#s-profile #content {
-  padding-top: 36px;
-}
 #profile {
   margin-bottom: 36px;
   padding: 20px;
@@ -881,6 +881,43 @@ footer p {
 	rating page
 
 --------------------------------------------------------------------------------------------- */
+#main header.progress {
+  position: relative;
+}
+#main #rating-progress {
+  width: 300px;
+  height: 54px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-repeat: no-repeat;
+}
+#main #rating-progress.progress-1 {
+  background-image: url(/images/bg_rating-progress-1.png);
+}
+#main #rating-progress.progress-2 {
+  background-image: url(/images/bg_rating-progress-2.png);
+}
+#main #rating-progress.progress-3 {
+  background-image: url(/images/bg_rating-progress-3.png);
+}
+#main #rating-progress span {
+  width: 20px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  text-indent: -9999px;
+}
+#main #rating-progress #step-1 {
+  left: 141px;
+}
+#main #rating-progress #step-2 {
+  left: 200px;
+}
+#main #rating-progress #step-3 {
+  left: 260px;
+}
 #sidebar .node.lowdown {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

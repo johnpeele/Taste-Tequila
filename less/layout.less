@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helveti
 	content - main & sidebar
 
 --------------------------------------------------------------------------------------------- */
-#content { padding: 18px 0 36px; }
+#content { padding: 36px 0; }
 #content-header { margin-bottom: 18px; }
 #content-header .promo { height: 90px; color: @gray-light; background-color: #efede8; }
 
@@ -136,6 +136,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 	community page
 
 --------------------------------------------------------------------------------------------- */
+#s-community #content { padding-top: 18px; }
 #activity-feed { }
 #activity-feed .feed-item { padding: 25px 0 25px 60px; background: url(/images/bg_feed-item.png) bottom left no-repeat; }
 #activity-feed .feed-item:first-child { padding-top: 0; }
@@ -161,7 +162,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 	member profile page
 
 --------------------------------------------------------------------------------------------- */
-#s-profile #content { padding-top: 36px; }
+#s-profile { }
 #profile { margin-bottom: 36px; padding: 20px; position: relative; background: @beige-lighter url(/images/bg_profile.jpg) no-repeat; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
 #profile img.avatar { padding: 5px; width: 90px; height: 90px; float: left; background-color: @white; .rounded(5px); .box-shadow(0 1px 2px rgba(0,0,0,.4)); }
 #profile .tape { width: 42px; height: 29px; position: absolute; top: 12px; left: 10px; display: block; background: url(/images/bg_avatar-tape.png) no-repeat; z-index: 2; }
@@ -191,6 +192,17 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 	rating page
 
 --------------------------------------------------------------------------------------------- */
+#s-rating { }
+#main header.progress { position: relative; }
+#main #rating-progress { width: 300px; height: 54px; position: absolute; top: 0; right: 0; background-repeat: no-repeat; }
+#main #rating-progress.progress-1 { background-image: url(/images/bg_rating-progress-1.png); }
+#main #rating-progress.progress-2 { background-image: url(/images/bg_rating-progress-2.png); }
+#main #rating-progress.progress-3 { background-image: url(/images/bg_rating-progress-3.png); }
+#main #rating-progress span { width: 20px; height: 40px; display: inline-block; position: absolute; top: 2px; text-indent: -9999px; }
+#main #rating-progress #step-1 { left: 141px; }
+#main #rating-progress #step-2 { left: 200px; }
+#main #rating-progress #step-3 { left: 260px; }
+
 #sidebar .node.lowdown { .rounded(5px); }
 #sidebar .node.lowdown h4 { margin-bottom: 18px; padding-bottom: 10px; font: 16px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_feed-item.png) bottom left no-repeat; }
 #sidebar .node.lowdown img { padding: 5px; width: 90px; height: 90px; float: left; background-color: @white; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
