@@ -316,6 +316,76 @@ h6 {
   width: 5px;
   height: 9px;
 }
+form {
+  margin-bottom: 18px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  padding: 5px 10px;
+  width: 280px;
+  max-width: 100%;
+  display: block;
+  outline: none;
+  font: 18px "ClarendonFSLight", Georgia, "Times New Roman", Times, serif;
+  color: #5d5b57;
+  background: #ffffff;
+  border: 1px solid #e6e1cf;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+select {
+  padding: 0;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  color: #5d5b57;
+  border: 1px solid #aaa;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+textarea {
+  min-height: 60px;
+}
+label {
+  margin: 8px 20px 0 0;
+  width: 140px;
+  float: left;
+  display: block;
+  font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
+  color: #5d5b57;
+}
+select {
+  width: 220px;
+}
+input[type="checkbox"] {
+  display: inline;
+}
+.form-item {
+  padding: 20px;
+  overflow: hidden;
+  background: url(/images/bg_divider-light.png) bottom left no-repeat;
+}
+.form-item .field {
+  width: 300px;
+  float: left;
+}
+.form-item .field p.notes {
+  margin: 5px 0 0 0;
+  font: 10px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #999999;
+}
+.rating-form .form-item {
+  padding-left: 80px;
+}
 /* ---------------------------------------------------------------------------------------------
 
 	header - mast
@@ -549,7 +619,7 @@ h6 {
   padding-bottom: 10px;
   height: 54px;
   overflow: hidden;
-  background: url(/images/bg_feed-item.png) bottom center no-repeat;
+  background: url(/images/bg_divider.png) bottom center no-repeat;
 }
 #sidebar .node .ratings-list li:last-child, #sidebar .node .ratings-list li.lastrating {
   background: none;
@@ -686,17 +756,17 @@ footer p {
 }
 #activity-feed .feed-item {
   padding: 25px 0 25px 60px;
-  background: url(/images/bg_feed-item.png) bottom left no-repeat;
+  background: url(/images/bg_divider.png) bottom left no-repeat;
 }
 #activity-feed .feed-item:first-child {
   padding-top: 0;
 }
 #activity-feed .feed-item > a img {
   margin-left: -60px;
+  float: left;
   padding: 5px;
   width: 40px;
   height: 40px;
-  float: left;
   background-color: #ffffff;
   border-bottom: 1px solid #e0dcd3;
   -webkit-border-radius: 5px;
@@ -740,10 +810,10 @@ footer p {
 }
 #activity-feed .feed-item.comment .act > a img, #activity-feed .feed-item.review .act > a img {
   margin-left: -120px;
+  float: left;
   padding: 5px;
   width: 90px;
   height: 90px;
-  float: left;
   background-color: #ffffff;
   border-bottom: 1px solid #e0dcd3;
   -webkit-border-radius: 5px;
@@ -771,7 +841,7 @@ footer p {
 	member profile page
 
 --------------------------------------------------------------------------------------------- */
-#profile {
+#main #profile {
   margin-bottom: 36px;
   padding: 20px;
   position: relative;
@@ -782,12 +852,13 @@ footer p {
   border-radius: 5px;
   -webkit-background-clip: padding-box;
 }
-#profile img.avatar {
+#main #profile img.avatar {
+  float: left;
   padding: 5px;
   width: 90px;
   height: 90px;
-  float: left;
   background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -796,7 +867,7 @@ footer p {
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
-#profile .tape {
+#main #profile .tape {
   width: 42px;
   height: 29px;
   position: absolute;
@@ -806,32 +877,32 @@ footer p {
   background: url(/images/bg_avatar-tape.png) no-repeat;
   z-index: 2;
 }
-#profile #details {
+#main #profile #details {
   padding: 0 20px 0 20px;
   width: 280px;
   float: left;
 }
-#profile #details h1 {
+#main #profile #details h1 {
   margin-bottom: 10px;
   font-size: 34px;
   line-height: 1.2;
 }
-#profile #details ul {
+#main #profile #details ul {
   padding-left: 30px;
   font-size: 14px;
 }
-#profile #details ul.location {
+#main #profile #details ul.location {
   background: url(/images/bg_profile-details-location.png) no-repeat;
 }
-#profile #details ul.contact {
+#main #profile #details ul.contact {
   background: url(/images/bg_profile-details-contact.png) no-repeat;
 }
-#profile #details li {
+#main #profile #details li {
   margin-bottom: 2px;
   padding-bottom: 2px;
   background: url(/images/bg_profile-details-divider.png) bottom right no-repeat;
 }
-#profile #member-since {
+#main #profile #member-since {
   padding-top: 18px;
   width: 144px;
   height: 36px;
@@ -881,7 +952,7 @@ footer p {
 	rating page
 
 --------------------------------------------------------------------------------------------- */
-#main header.progress {
+#s-rating #main header.title {
   position: relative;
 }
 #main #rating-progress {
@@ -918,6 +989,50 @@ footer p {
 #main #rating-progress #step-3 {
   left: 260px;
 }
+#main #rating-form {
+  position: relative;
+  background: #fffdf6;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#main #rating-form header {
+  padding: 20px;
+  overflow: hidden;
+  background: url(/images/bg_divider.png) bottom left no-repeat;
+}
+#main #rating-form header a img {
+  margin: 0 10px 0 0;
+  float: left;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#main #rating-form header h1 {
+  width: 380px;
+  float: left;
+  font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
+  text-transform: none;
+}
+#main #rating-form header a#rate-different {
+  margin-top: 9px;
+  float: right;
+  font: 10px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #5d5b57;
+}
+#main #rating-form header a#rate-different:hover {
+  color: #b24a00;
+}
 #sidebar .node.lowdown {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -929,13 +1044,13 @@ footer p {
   padding-bottom: 10px;
   font: 16px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
   text-transform: none;
-  background: url(/images/bg_feed-item.png) bottom left no-repeat;
+  background: url(/images/bg_divider.png) bottom left no-repeat;
 }
 #sidebar .node.lowdown img {
+  float: left;
   padding: 5px;
   width: 90px;
   height: 90px;
-  float: left;
   background-color: #ffffff;
   border-bottom: 1px solid #e0dcd3;
   -webkit-border-radius: 5px;
