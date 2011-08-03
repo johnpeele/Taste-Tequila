@@ -14,8 +14,9 @@ $(document).ready(function() {
 	================================================== */
   // $("#sidebar .node:only-child").addClass("onlynode");
   $("#sidebar .node:last-child").not("#sidebar .node:first-child").addClass("lastnode");
-  $("#sidebar .ratings-list li:last-child").addClass("lastrating");
-  $("#sidebar .badge-list li:nth-child(5n)").addClass("lastbadge");
+  $("#sidebar .ratings-list li:last-child").addClass("last");
+  $("#sidebar .badge-list li:nth-child(5n)").addClass("last");
+  $("#sidebar .avatar-grid li:nth-child(5n)").addClass("last");
   
   /* Nav Dropdowns on hover
 	================================================== */
@@ -26,8 +27,9 @@ $(document).ready(function() {
   
   /* Tipsy Tooltips
 	================================================== */
-  $("[rel=tipsy]").tipsy({gravity: "w", opacity: 0.7});
-  $("[rel=tipsy-top]").tipsy({gravity: "s", opacity: 0.7});
+  $("[rel=tipsy]").tipsy({gravity: "w", opacity: 1});
+  $("[rel=tipsy-top]").tipsy({gravity: "s", opacity: 1});
+  $("[rel=tipsy-top-html]").tipsy({gravity: "s", html: "true", opacity: 1});
 
 	/* Tabs Activiation
 	================================================== */

@@ -337,6 +337,9 @@ select {
   -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-background-clip: padding-box;
+  -webkit-transition: border-color 0.3s linear;
+  -moz-transition: border-color 0.3s linear;
+  transition: border-color 0.3s linear;
 }
 select {
   padding: 0;
@@ -416,6 +419,7 @@ input[type="checkbox"] {
 #identity h2 {
   display: none;
 }
+/* primary nav ---------------------------------------- */
 #primary-nav {
   margin: 0 10px;
   height: 36px;
@@ -478,6 +482,7 @@ input[type="checkbox"] {
   color: #ffffff;
   background-color: #fe6a00;
 }
+/* search ---------------------------------------- */
 #search {
   margin-left: 10px;
   padding: 0 0 0 20px;
@@ -526,6 +531,7 @@ input[type="checkbox"] {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+/* account widget ---------------------------------------- */
 #account {
   padding: 10px 0 0 20px;
   width: 280px;
@@ -580,12 +586,12 @@ input[type="checkbox"] {
   color: #999999;
   background-color: #efede8;
 }
-/* Main ---------------------------------------- */
+/* main ---------------------------------------- */
 #main header.title h2 {
   margin-bottom: 12px;
   font-size: 40px;
 }
-/* Sidebar ---------------------------------------- */
+/* sidebar general ---------------------------------------- */
 #sidebar .node {
   padding: 10px;
   position: relative;
@@ -612,6 +618,7 @@ input[type="checkbox"] {
 #sidebar .node h3 {
   font-size: 27px;
 }
+/* sidebar - ratings list ---------------------------------------- */
 #sidebar .node .ratings-list {
   margin: 0;
 }
@@ -621,7 +628,7 @@ input[type="checkbox"] {
   overflow: hidden;
   background: url(/images/bg_divider.png) bottom center no-repeat;
 }
-#sidebar .node .ratings-list li:last-child, #sidebar .node .ratings-list li.lastrating {
+#sidebar .node .ratings-list li:last-child, #sidebar .node .ratings-list li.last {
   background: none;
 }
 #sidebar .node .ratings-list span.position {
@@ -699,6 +706,63 @@ input[type="checkbox"] {
   float: none;
   font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #969601;
+}
+/* sidebar - highest rated list ---------------------------------------- */
+#sidebar .node.highest-rated .ratings-list li, #sidebar .node.highest-rated .ratings-list .ratings {
+  height: auto;
+}
+#sidebar .node.highest-rated .ratings-list .ratings span.rating-expert, #sidebar .node.highest-rated .ratings-list .ratings span.rating-community, #sidebar .node.highest-rated .ratings-list .ratings span.rating-personal {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+/* sidebar - badge list & avatar grid ---------------------------------------- */
+#sidebar .node .badge-list li, #sidebar .node .avatar-grid li {
+  margin: 0 10px 10px 0;
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+#sidebar .node .badge-list li:nth-child(5n),
+#sidebar .node .badge-list li.last,
+#sidebar .node .avatar-grid li:nth-child(5n),
+#sidebar .node .avatar-grid li.last {
+  margin-right: 0;
+}
+#sidebar .node .badge-list li img {
+  width: 47px;
+  height: 47px;
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#sidebar .node .avatar-grid li img {
+  padding: 5px;
+  width: 38px;
+  height: 38px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+.tipsy em {
+  margin: 2px 0 4px 5px;
+  padding: 4px 10px 1px;
+  display: inline-block;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #5d5b57;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding-box;
 }
 /* ---------------------------------------------------------------------------------------------
 
@@ -838,14 +902,14 @@ footer p {
 }
 /* ---------------------------------------------------------------------------------------------
 
-	member profile page
+	member & brand profile page
 
 --------------------------------------------------------------------------------------------- */
+/* profile general ---------------------------------------- */
 #main #profile {
   margin-bottom: 36px;
   padding: 20px;
   position: relative;
-  background: #fffdf6 url(/images/bg_profile.jpg) no-repeat;
   border-bottom: 1px solid #e0dcd3;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -886,6 +950,7 @@ footer p {
   margin-bottom: 10px;
   font-size: 34px;
   line-height: 1.2;
+  text-shadow: 0 1px 0 #ffffff;
 }
 #main #profile #details ul {
   padding-left: 30px;
@@ -902,7 +967,11 @@ footer p {
   padding-bottom: 2px;
   background: url(/images/bg_profile-details-divider.png) bottom right no-repeat;
 }
-#main #profile #member-since {
+/* member profile ---------------------------------------- */
+#s-profile.member #main #profile {
+  background: #fffdf6 url(/images/bg_profile-member.jpg) no-repeat;
+}
+#s-profile.member #main #profile #member-since {
   padding-top: 18px;
   width: 144px;
   height: 36px;
@@ -917,35 +986,38 @@ footer p {
   -o-transform: rotate(-10deg);
   -ms-transform: rotate(-10deg);
 }
-#sidebar .node .badge-list li {
-  margin: 0 10px 10px 0;
-  width: 48px;
-  height: 48px;
-  float: left;
+/* brand profile ---------------------------------------- */
+#s-profile.brand #main #profile {
+  background: #fffdf6 url(/images/bg_profile-brand.jpg) 0 50% no-repeat;
 }
-#sidebar .node .badge-list li:nth-child(5n), #sidebar .node .badge-list li.lastbadge {
-  margin-right: 0;
+#s-profile.brand #main #profile #nom {
+  padding-top: 20px;
+  width: 116px;
+  height: 52px;
+  position: absolute;
+  top: 75px;
+  right: 22px;
+  text-align: center;
+  font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif;
+  background: url(/images/bg_profile-nom.png) no-repeat;
+  -webkit-transform: rotate(-10deg);
+  -moz-transform: rotate(-10deg);
+  -o-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
 }
-#sidebar .node .badge-list li img {
-  width: 47px;
-  height: 47px;
-  border: 1px solid #eeeeee;
+#s-profile.brand #main #profile #nom a:hover {
+  text-decoration: none;
+}
+/* sidebar - google map ---------------------------------------- */
+#sidebar .node.google-map img {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
   -webkit-background-clip: padding-box;
 }
+/* sidebar - member bio ---------------------------------------- */
 #sidebar .node.bio p {
   font-size: 12px;
-}
-#sidebar .node.highest-rated .ratings-list li, #sidebar .node.highest-rated .ratings-list .ratings {
-  height: auto;
-}
-#sidebar .node.highest-rated .ratings-list .ratings span.rating-expert, #sidebar .node.highest-rated .ratings-list .ratings span.rating-community, #sidebar .node.highest-rated .ratings-list .ratings span.rating-personal {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-background-clip: padding-box;
 }
 /* ---------------------------------------------------------------------------------------------
 
@@ -1033,6 +1105,7 @@ footer p {
 #main #rating-form header a#rate-different:hover {
   color: #b24a00;
 }
+/* sidebar - lowdown ---------------------------------------- */
 #sidebar .node.lowdown {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

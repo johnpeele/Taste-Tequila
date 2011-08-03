@@ -54,7 +54,7 @@
 		
 /* #Basic Styles
 ================================================== */
-	body { background: #fff; font: 13px/1.5 "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #444; -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */ -webkit-text-size-adjust: none; }
+	body { background: #fff; font: 13px/1.5 "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #444; -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */ -webkit-text-size-adjust: 100%; }
 
 /* #Typography
 ================================================== */
