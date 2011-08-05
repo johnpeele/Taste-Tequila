@@ -26,7 +26,7 @@
 body { font-family: "ClarendonFSLight", Georgia, "Times New Roman", Times, serif; color: @gray-main; background: #f9f5eb url(/images/bg_main.png); }
 a,
 a:active,
-a:visited { text-decoration: none; color: @link-color; -webkit-transition: all 0.3s linear; }
+a:visited { text-decoration: none; color: @link-color; .transition(all 0.3s linear); }
 a:hover { text-decoration: underline; color: @link-hover-color; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "SteelfishBold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; color: @gray-main; }
@@ -146,7 +146,8 @@ input[type="checkbox"] { display: inline; }
 #sidebar .node .ratings-list .ratings span.rating-expert { height: 15px; color: #761a02; text-shadow: 0 1px 0 rgba(255,255,255,.6); background-color: #f05931; border-color: #cb3007; .border-radius(5px, 5px, 0, 0); }
 #sidebar .node .ratings-list .ratings span.rating-community { height: 16px; color: #845e00; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #fcc12c; border-color: #d39f1d; .border-radius(0); }
 #sidebar .node .ratings-list .ratings span.rating-personal { margin-bottom: 0; height: 15px; text-shadow: 0 1px 0 rgb(255,255,255); color: #969601; background-color: #ffff99; border-color: #e1e171; .border-radius(0, 0, 5px, 5px); }
-#sidebar .node .ratings-list .ratings span.rating-personal a { width: auto; float: none; font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #969601; }
+#sidebar .node .ratings-list .ratings span.rating-personal a { width: auto; float: none; display: block; font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; color: #969601; }
+#sidebar .node .ratings-list .ratings span.rating-personal a:hover { text-decoration: none; }
 
 /* sidebar - highest rated list ---------------------------------------- */
 #sidebar .node.highest-rated .ratings-list li,
@@ -181,7 +182,6 @@ footer ul.nav-tabs li { margin-right: 5px; }
 footer ul.nav-tabs a { padding: 11px 10px 7px 10px; display: block; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
 footer ul.nav-tabs a:hover { text-decoration: none; }
 footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
-
 
 
 /* #Page Styles
@@ -242,6 +242,32 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #s-profile.brand #main #profile #nom { padding-top: 20px; width: 116px; height: 52px; position: absolute; top: 75px; right: 22px; text-align: center; font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; background: url(/images/bg_profile-nom.png) no-repeat; .rotate(-10deg); }
 #s-profile.brand #main #profile #nom a:hover { text-decoration: none; }
 
+#s-profile.brand .brand-rating { margin-bottom: 10px; padding-bottom: 10px; background: url(/images/bg_divider.png) bottom left no-repeat; .clearfix; }
+#s-profile.brand .brand-rating h2 { padding-top: 4px; float: left; font-size: 34px; }
+#s-profile.brand .brand-rating h3 { padding: 1px 0 0 25px; float: left; font-size: 27px; color: @link-color; background: url(/images/bg_brand-rating-h3.png) 0 14px no-repeat; cursor: pointer; .transition(color 0.3s linear); }
+#s-profile.brand .brand-rating h3:hover { color: @link-hover-color; }
+#s-profile.brand .brand-rating h3.selected { color: @link-hover-color; background-position: 0 -25px; }
+#s-profile.brand .brand-rating.overall { padding: 0 10px 26px 0; }
+#s-profile.brand .brand-rating.category {  }
+#s-profile.brand .brand-rating .group { padding: 10px 10px 0 10px; background-color: @beige-lighter; border-bottom: 1px solid #e0dcd3; .rounded(5px); .clearfix; }
+#s-profile.brand .brand-rating .group .ratings { height: 37px; }
+#s-profile.brand .brand-rating .group .ratings span { height: 35px; font-size: 24px; }
+#s-profile.brand .brand-rating .singles { width: 600px; }
+#s-profile.brand .brand-rating .single { padding: 10px 0 20px 110px; background: url(/images/bg_divider-light.png) no-repeat; clear: both; }
+#s-profile.brand .brand-rating .single a > img { margin-left: -110px; margin-bottom: 10px; float: left; .img-square(90px); }
+#s-profile.brand .brand-rating .single a + a { margin-top: 35px; width: 330px; float: left; font-size: 18px; }
+#s-profile.brand .brand-rating .single .ratings { margin-top: 29px; }
+
+#s-profile.brand .ratings { margin-bottom: 10px; width: 140px; height: 52px; float: right; }
+#s-profile.brand .ratings span { margin-right: 1px; width: 44px; height: 50px; display: inline-block; cursor: default; font: 34px/1.4 "SteelfishRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; background-color: @gray-lighter; border: 1px solid @gray-light; }
+#s-profile.brand .ratings span:last-child,
+#s-profile.brand .ratings span.last { margin-right: 0; }
+#s-profile.brand .ratings span.rating-expert { color: #761a02; text-shadow: 0 1px 0 rgba(255,255,255,.6); background-color: #f05931; border-color: #cb3007; .border-radius(5px, 0, 0, 5px); }
+#s-profile.brand .ratings span.rating-community { color: #845e00; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #fcc12c; border-color: #d39f1d; }
+#s-profile.brand .ratings span.rating-personal { color: #969601; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #ffff99; border-color: #e1e171; .border-radius(0, 5px, 5px, 0); }
+#s-profile.brand .ratings span.rating-personal a { display: block; color: #969601; }
+#s-profile.brand .ratings span.rating-personal a:hover { text-decoration: none; }
+
 /* sidebar - google map ---------------------------------------- */
 #sidebar .node.google-map img { .rounded(5px); }
 
@@ -277,6 +303,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #sidebar .node.lowdown img { float: left; .img-square(90px); }
 #sidebar .node.lowdown ul { margin-left: 112px; font: 12px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
 #sidebar .node.lowdown ul strong { font-weight: normal; font-family: "BrandonGrotesque-Bold"; color: @gray-main; }
+
 
 /* #Media Queries
 ================================================== */

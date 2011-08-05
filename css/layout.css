@@ -236,6 +236,8 @@ a, a:active, a:visited {
   text-decoration: none;
   color: #fe6a00;
   -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 a:hover {
   text-decoration: underline;
@@ -704,8 +706,12 @@ input[type="checkbox"] {
 #sidebar .node .ratings-list .ratings span.rating-personal a {
   width: auto;
   float: none;
+  display: block;
   font: 12px/1.8 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #969601;
+}
+#sidebar .node .ratings-list .ratings span.rating-personal a:hover {
+  text-decoration: none;
 }
 /* sidebar - highest rated list ---------------------------------------- */
 #sidebar .node.highest-rated .ratings-list li, #sidebar .node.highest-rated .ratings-list .ratings {
@@ -1006,6 +1012,153 @@ footer p {
   -ms-transform: rotate(-10deg);
 }
 #s-profile.brand #main #profile #nom a:hover {
+  text-decoration: none;
+}
+#s-profile.brand .brand-rating {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  background: url(/images/bg_divider.png) bottom left no-repeat;
+  zoom: 1;
+}
+#s-profile.brand .brand-rating:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#s-profile.brand .brand-rating h2 {
+  padding-top: 4px;
+  float: left;
+  font-size: 34px;
+}
+#s-profile.brand .brand-rating h3 {
+  padding: 1px 0 0 25px;
+  float: left;
+  font-size: 27px;
+  color: #fe6a00;
+  background: url(/images/bg_brand-rating-h3.png) 0 14px no-repeat;
+  cursor: pointer;
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+#s-profile.brand .brand-rating h3:hover {
+  color: #b24a00;
+}
+#s-profile.brand .brand-rating h3.selected {
+  color: #b24a00;
+  background-position: 0 -25px;
+}
+#s-profile.brand .brand-rating.overall {
+  padding: 0 10px 26px 0;
+}
+#s-profile.brand .brand-rating .group {
+  padding: 10px 10px 0 10px;
+  background-color: #fffdf6;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  zoom: 1;
+}
+#s-profile.brand .brand-rating .group:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
+}
+#s-profile.brand .brand-rating .group .ratings {
+  height: 37px;
+}
+#s-profile.brand .brand-rating .group .ratings span {
+  height: 35px;
+  font-size: 24px;
+}
+#s-profile.brand .brand-rating .singles {
+  width: 600px;
+}
+#s-profile.brand .brand-rating .single {
+  padding: 10px 0 20px 110px;
+  background: url(/images/bg_divider-light.png) no-repeat;
+  clear: both;
+}
+#s-profile.brand .brand-rating .single a > img {
+  margin-left: -110px;
+  margin-bottom: 10px;
+  float: left;
+  padding: 5px;
+  width: 90px;
+  height: 90px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#s-profile.brand .brand-rating .single a + a {
+  margin-top: 35px;
+  width: 330px;
+  float: left;
+  font-size: 18px;
+}
+#s-profile.brand .brand-rating .single .ratings {
+  margin-top: 29px;
+}
+#s-profile.brand .ratings {
+  margin-bottom: 10px;
+  width: 140px;
+  height: 52px;
+  float: right;
+}
+#s-profile.brand .ratings span {
+  margin-right: 1px;
+  width: 44px;
+  height: 50px;
+  display: inline-block;
+  cursor: default;
+  font: 34px/1.4 "SteelfishRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #999999;
+}
+#s-profile.brand .ratings span:last-child, #s-profile.brand .ratings span.last {
+  margin-right: 0;
+}
+#s-profile.brand .ratings span.rating-expert {
+  color: #761a02;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  background-color: #f05931;
+  border-color: #cb3007;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  -webkit-background-clip: padding-box;
+}
+#s-profile.brand .ratings span.rating-community {
+  color: #845e00;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #fcc12c;
+  border-color: #d39f1d;
+}
+#s-profile.brand .ratings span.rating-personal {
+  color: #969601;
+  text-shadow: 0 1px 0 #ffffff;
+  background-color: #ffff99;
+  border-color: #e1e171;
+  -webkit-border-radius: 0 5px 5px 0;
+  -moz-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  -webkit-background-clip: padding-box;
+}
+#s-profile.brand .ratings span.rating-personal a {
+  display: block;
+  color: #969601;
+}
+#s-profile.brand .ratings span.rating-personal a:hover {
   text-decoration: none;
 }
 /* sidebar - google map ---------------------------------------- */
