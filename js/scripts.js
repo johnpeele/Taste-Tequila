@@ -65,7 +65,8 @@ $(document).ready(function() {
 	================================================== */
 	$('.group .singles').hide();
 	$('.group h3').click(function() {
-	  $(this).toggleClass('selected').parent().find('.singles').slideToggle();
+    // $(this).toggleClass('selected').parent().find('.singles').slideToggle();
+    $(this).toggleClass('selected').parent().find('.singles').animate({ "height": "toggle", "opacity": "toggle" }, 500);
 	});
 	
 	/* Self-labeled form fields

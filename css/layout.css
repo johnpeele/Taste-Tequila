@@ -908,7 +908,7 @@ footer p {
 }
 /* ---------------------------------------------------------------------------------------------
 
-	member & brand profile page
+	member, brand & product profile page
 
 --------------------------------------------------------------------------------------------- */
 /* profile general ---------------------------------------- */
@@ -1160,6 +1160,44 @@ footer p {
 }
 #s-profile.brand .ratings span.rating-personal a:hover {
   text-decoration: none;
+}
+/* product profile ---------------------------------------- */
+#s-profile.product #main #profile {
+  background: #fffdf6;
+}
+#s-profile.product #main #profile h1 {
+  margin: 0 0 9px -31px;
+  padding: 12px 0 0 31px;
+  height: 55px;
+  font: 28px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
+  text-transform: none;
+  background: url(/images/bg_product-profile-h1.png) no-repeat;
+}
+#s-profile.product #main #profile img {
+  padding: 5px;
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  float: left;
+}
+#s-profile.product #main #profile .tape {
+  top: 99px;
+}
+#s-profile.product #main #profile #description {
+  margin-left: 220px;
+}
+#s-profile.product #main #profile #description h2 {
+  margin-top: 18px;
+  font: 18px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
+  text-transform: none;
+}
+#s-profile.product #main #profile #description p {
+  font-size: 14px;
 }
 /* sidebar - google map ---------------------------------------- */
 #sidebar .node.google-map img {
