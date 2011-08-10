@@ -134,6 +134,17 @@ input[type="checkbox"] { display: inline; }
 #sidebar .node.lastnode { border-bottom: 1px solid #e0dcd3; .border-radius( 0, 0, 5px, 5px); }
 #sidebar .node h3 { font-size: 27px; }
 
+/* sidebar - lowdown ---------------------------------------- */
+#sidebar .node.lowdown img { float: left; .img-square(90px); }
+#sidebar .node.lowdown ul { margin-left: 112px; font: 12px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
+#sidebar .node.lowdown ul strong { font-weight: normal; font-family: "BrandonGrotesque-Bold"; color: @gray-main; }
+
+/* sidebar - google map ---------------------------------------- */
+#sidebar .node.google-map img { .rounded(5px); }
+
+/* sidebar - member bio ---------------------------------------- */
+#sidebar .node.bio p { font-size: 12px; }
+
 /* sidebar - ratings list ---------------------------------------- */
 #sidebar .node .ratings-list { margin: 0; }
 #sidebar .node .ratings-list li { padding-bottom: 10px; height: 54px; overflow: hidden; background: url(/images/bg_divider.png) bottom center no-repeat; }
@@ -223,31 +234,41 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 --------------------------------------------------------------------------------------------- */
 /* profile general ---------------------------------------- */
-#main #profile { margin-bottom: 36px; padding: 20px; position: relative; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
-#main #profile img.avatar { float: left; .img-square(90px); .box-shadow(0 1px 2px rgba(0,0,0,.4)); }
-#main #profile .tape { width: 42px; height: 29px; position: absolute; top: 12px; left: 10px; display: block; background: url(/images/bg_avatar-tape.png) no-repeat; z-index: 2; }
-#main #profile #details { padding: 0 20px 0 20px; width: 280px; float: left; }
-#main #profile #details h1 { margin-bottom: 10px; font-size: 34px; line-height: 1.2; text-shadow: 0 1px 0 rgb(255,255,255); }
-#main #profile #details ul { padding-left: 30px; font-size: 14px; }
-#main #profile #details ul.location { background: url(/images/bg_profile-details-location.png) no-repeat; }
-#main #profile #details ul.contact { background: url(/images/bg_profile-details-contact.png) no-repeat; }
-#main #profile #details li { margin-bottom: 2px; padding-bottom: 2px; background: url(/images/bg_profile-details-divider.png) bottom right no-repeat; }
+#s-profile #profile { margin-bottom: 36px; padding: 20px; position: relative; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
+#s-profile #profile img.avatar { float: left; .img-square(90px); .box-shadow(0 1px 2px rgba(0,0,0,.4)); }
+#s-profile #profile .tape { width: 42px; height: 29px; position: absolute; top: 12px; left: 10px; display: block; background: url(/images/bg_avatar-tape.png) no-repeat; z-index: 2; }
+#s-profile #profile #details { padding: 0 20px 0 20px; width: 280px; float: left; }
+#s-profile #profile #details h1 { margin-bottom: 10px; font-size: 34px; line-height: 1.2; text-shadow: 0 1px 0 rgb(255,255,255); }
+#s-profile #profile #details ul { padding-left: 30px; font-size: 14px; }
+#s-profile #profile #details ul.location { background: url(/images/bg_profile-details-location.png) no-repeat; }
+#s-profile #profile #details ul.contact { background: url(/images/bg_profile-details-contact.png) no-repeat; }
+#s-profile #profile #details li { margin-bottom: 2px; padding-bottom: 2px; background: url(/images/bg_profile-details-divider.png) bottom right no-repeat; }
+
+#s-profile .ratings { margin-bottom: 10px; width: 140px; height: 52px; float: right; }
+#s-profile .ratings span { margin-right: 1px; width: 44px; height: 50px; display: inline-block; cursor: default; font: 34px/1.4 "SteelfishRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; background-color: @gray-lighter; border: 1px solid @gray-light; }
+#s-profile .ratings span:last-child,
+#s-profile .ratings span.last { margin-right: 0; }
+#s-profile .ratings span.rating-expert { color: #761a02; text-shadow: 0 1px 0 rgba(255,255,255,.6); background-color: #f05931; border-color: #cb3007; .border-radius(5px, 0, 0, 5px); }
+#s-profile .ratings span.rating-community { color: #845e00; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #fcc12c; border-color: #d39f1d; }
+#s-profile .ratings span.rating-personal { color: #969601; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #ffff99; border-color: #e1e171; .border-radius(0, 5px, 5px, 0); }
+#s-profile .ratings span.rating-personal a { display: block; color: #969601; }
+#s-profile .ratings span.rating-personal a:hover { text-decoration: none; }
 
 /* member profile ---------------------------------------- */
-#s-profile.member #main #profile { background: @beige-lighter url(/images/bg_profile-member.jpg) no-repeat; }
-#s-profile.member #main #profile #member-since { padding-top: 18px; width: 144px; height: 36px; position: absolute; right: 10px; text-align: center; font: 18px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; text-transform: uppercase; background: url(/images/bg_profile-member-since.png) no-repeat; .rotate(-10deg); }
+#s-profile.member #profile { background: @beige-lighter url(/images/bg_profile-member.jpg) no-repeat; }
+#s-profile.member #profile #member-since { padding-top: 18px; width: 144px; height: 36px; position: absolute; right: 10px; text-align: center; font: 18px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; text-transform: uppercase; background: url(/images/bg_profile-member-since.png) no-repeat; .rotate(-10deg); }
 
 /* brand profile ---------------------------------------- */
-#s-profile.brand #main #profile { background: @beige-lighter url(/images/bg_profile-brand.jpg) 0 50% no-repeat; }
-#s-profile.brand #main #profile #nom { padding-top: 20px; width: 116px; height: 52px; position: absolute; top: 75px; right: 22px; text-align: center; font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; background: url(/images/bg_profile-nom.png) no-repeat; .rotate(-10deg); }
-#s-profile.brand #main #profile #nom a:hover { text-decoration: none; }
+#s-profile.brand #profile { background: @beige-lighter url(/images/bg_profile-brand.jpg) 0 50% no-repeat; }
+#s-profile.brand #profile #nom { padding-top: 20px; width: 116px; height: 52px; position: absolute; top: 75px; right: 22px; text-align: center; font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; background: url(/images/bg_profile-nom.png) no-repeat; .rotate(-10deg); }
+#s-profile.brand #profile #nom a:hover { text-decoration: none; }
 
 #s-profile.brand .brand-rating { margin-bottom: 10px; padding-bottom: 10px; background: url(/images/bg_divider.png) bottom left no-repeat; .clearfix; }
 #s-profile.brand .brand-rating h2 { padding-top: 4px; float: left; font-size: 34px; }
 #s-profile.brand .brand-rating h3 { padding: 1px 0 0 25px; float: left; font-size: 27px; color: @link-color; background: url(/images/bg_brand-rating-h3.png) 0 14px no-repeat; cursor: pointer; .transition(color 0.3s linear); }
 #s-profile.brand .brand-rating h3:hover { color: @link-hover-color; }
 #s-profile.brand .brand-rating h3.selected { color: @link-hover-color; background-position: 0 -25px; }
-#s-profile.brand .brand-rating.overall { padding: 0 10px 26px 0; }
+#s-profile.brand .brand-rating.overall { padding-right: 10px; }
 #s-profile.brand .brand-rating.category {  }
 #s-profile.brand .brand-rating .group { padding: 10px 10px 0 10px; background-color: @beige-lighter; border-bottom: 1px solid #e0dcd3; .rounded(5px); .clearfix; }
 #s-profile.brand .brand-rating .group .ratings { height: 37px; }
@@ -258,30 +279,41 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #s-profile.brand .brand-rating .single a + a { margin-top: 35px; width: 330px; float: left; font-size: 18px; }
 #s-profile.brand .brand-rating .single .ratings { margin-top: 29px; }
 
-#s-profile.brand .ratings { margin-bottom: 10px; width: 140px; height: 52px; float: right; }
-#s-profile.brand .ratings span { margin-right: 1px; width: 44px; height: 50px; display: inline-block; cursor: default; font: 34px/1.4 "SteelfishRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-align: center; background-color: @gray-lighter; border: 1px solid @gray-light; }
-#s-profile.brand .ratings span:last-child,
-#s-profile.brand .ratings span.last { margin-right: 0; }
-#s-profile.brand .ratings span.rating-expert { color: #761a02; text-shadow: 0 1px 0 rgba(255,255,255,.6); background-color: #f05931; border-color: #cb3007; .border-radius(5px, 0, 0, 5px); }
-#s-profile.brand .ratings span.rating-community { color: #845e00; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #fcc12c; border-color: #d39f1d; }
-#s-profile.brand .ratings span.rating-personal { color: #969601; text-shadow: 0 1px 0 rgb(255,255,255); background-color: #ffff99; border-color: #e1e171; .border-radius(0, 5px, 5px, 0); }
-#s-profile.brand .ratings span.rating-personal a { display: block; color: #969601; }
-#s-profile.brand .ratings span.rating-personal a:hover { text-decoration: none; }
-
 /* product profile ---------------------------------------- */
-#s-profile.product #main #profile { background: @beige-lighter; }
-#s-profile.product #main #profile h1 { margin: 0 0 9px -31px; padding: 12px 0 0 31px; height: 55px; font: 28px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_product-profile-h1.png) no-repeat; }
-#s-profile.product #main #profile img { .img-square(200px); float: left; }
-#s-profile.product #main #profile .tape { top: 99px; }
-#s-profile.product #main #profile #description { margin-left: 220px; }
-#s-profile.product #main #profile #description h2 { margin-top: 18px; font: 18px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; }
-#s-profile.product #main #profile #description p { font-size: 14px; }
+#s-profile.product #profile { background: @beige-lighter; }
+#s-profile.product #profile h1 { margin: 0 0 9px -31px; padding: 12px 0 0 31px; height: 55px; font: 28px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_product-profile-h1.png) no-repeat; }
+#s-profile.product #profile img { .img-square(200px); float: left; }
+#s-profile.product #profile .tape { top: 90px; }
+#s-profile.product #profile #description { margin-left: 220px; }
+#s-profile.product #profile #description h2 { margin-top: 12px; padding-bottom: 6px; font: 18px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_divider-light.png) bottom left no-repeat; }
+#s-profile.product #profile #description p { font-size: 14px; }
 
-/* sidebar - google map ---------------------------------------- */
-#sidebar .node.google-map img { .rounded(5px); }
+#s-profile.product .group { margin-bottom: 20px; padding: 0 10px 20px 0; background: url(/images/bg_divider.png) bottom left no-repeat; .clearfix; }
+#s-profile.product .group h2 { float: left; font-size: 34px; }
+#s-profile.product #product-rating h2 { margin-top: 4px; }
+#s-profile.product #product-rating .ratings { margin-bottom: 0; } 
+#s-profile.product #flavor-profile #chart { margin-bottom: 10px; width: 370px; height: 168px; float: right; position: relative; background: url(/images/bg_flavor-profile-chart.png) no-repeat; }
+#s-profile.product #flavor-profile #chart ul { width: 370px; height: 168px; }
+#s-profile.product #flavor-profile #chart ul li { margin: 0; width: 35px; height: 100px; position: absolute; bottom: 51px; text-indent: -9999px; background-color: @beige; .opacity(70); }
+#s-profile.product #flavor-profile #chart ul li:hover,
+#s-profile.product #flavor-profile #chart ul li.hover { .opacity(100); }
+#s-profile.product #flavor-profile #chart ul #agave { left: 13px; background-color: #1dc9d4; }
+#s-profile.product #flavor-profile #chart ul #bitter { left: 57px; background-color: #c7f584; }
+#s-profile.product #flavor-profile #chart ul #sweet { left: 101px; background-color: #feefa7; }
+#s-profile.product #flavor-profile #chart ul #herbal { left: 145px; background-color: #3dba4c; }
+#s-profile.product #flavor-profile #chart ul #citrus { left: 189px; background-color: #fee05d; }
+#s-profile.product #flavor-profile #chart ul #floral { left: 233px; background-color: #e76f98; }
+#s-profile.product #flavor-profile #chart ul #spice { left: 277px; background-color: #e8441b; }
+#s-profile.product #flavor-profile #chart ul #wood { left: 321px; background-color: #913e12; }
 
-/* sidebar - member bio ---------------------------------------- */
-#sidebar .node.bio p { font-size: 12px; }
+#s-profile.product #expert-quotes blockquote { margin: 0 0 10px 240px; padding: 0 0 15px; background: url(/images/bg_divider-light.png) bottom left no-repeat; }
+#s-profile.product #expert-quotes blockquote:last-child,
+#s-profile.product #expert-quotes blockquote.last { margin-bottom: 0; padding: 0; background: none; }
+#s-profile.product #expert-quotes blockquote p { margin-bottom: 9px; font-size: 13px; line-height: 1.7; }
+#s-profile.product #expert-quotes blockquote cite { display: block; .clearfix; }
+#s-profile.product #expert-quotes blockquote img { margin-right: 10px; .img-square(40px); float: left; }
+#s-profile.product #expert-quotes blockquote cite a + a { margin-top: 15px; display: inline-block; }
+#s-profile.product #expert-quotes blockquote cite a:hover + a { text-decoration: underline; color: @link-hover-color; }
 
 /* ---------------------------------------------------------------------------------------------
 
@@ -307,11 +339,8 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #main #rating-form header a#rate-different:hover { color: @link-hover-color; }
 
 /* sidebar - lowdown ---------------------------------------- */
-#sidebar .node.lowdown { .rounded(5px); }
-#sidebar .node.lowdown h4 { margin-bottom: 18px; padding-bottom: 10px; font: 16px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_divider.png) bottom left no-repeat; }
-#sidebar .node.lowdown img { float: left; .img-square(90px); }
-#sidebar .node.lowdown ul { margin-left: 112px; font: 12px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
-#sidebar .node.lowdown ul strong { font-weight: normal; font-family: "BrandonGrotesque-Bold"; color: @gray-main; }
+#s-rating #sidebar .node.lowdown { .rounded(5px); }
+#s-rating #sidebar .node.lowdown h4 { margin-bottom: 18px; padding-bottom: 10px; font: 16px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_divider.png) bottom left no-repeat; }
 
 
 /* #Media Queries

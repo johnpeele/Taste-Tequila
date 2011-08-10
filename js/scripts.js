@@ -18,6 +18,7 @@ $(document).ready(function() {
   $('#sidebar .badge-list li:nth-child(5n)').addClass('last');
   $('#sidebar .avatar-grid li:nth-child(5n)').addClass('last');
   $('.ratings span:last-child').addClass('last');
+  $('#expert-quotes blockquote:last-child').addClass('last');
   
   /* Nav Dropdowns on hover
 	================================================== */
@@ -31,6 +32,13 @@ $(document).ready(function() {
   $('[rel=tipsy]').tipsy({gravity: 'w', opacity: 1});
   $('[rel=tipsy-top]').tipsy({gravity: 's', opacity: 1});
   $('[rel=tipsy-top-html]').tipsy({gravity: 's', html: 'true', opacity: 1});
+  
+  /* Flavor Profile Chart on hover
+	================================================== */
+  $('#chart li').hover(
+    function() { $(this).addClass('hover') },
+    function() { $(this).removeClass('hover') }
+  );
 
 	/* Tabs Activiation
 	================================================== */
