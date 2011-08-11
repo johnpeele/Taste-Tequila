@@ -1273,7 +1273,6 @@ footer p {
 #s-profile.product #flavor-profile #chart ul li {
   margin: 0;
   width: 35px;
-  height: 100px;
   position: absolute;
   bottom: 51px;
   text-indent: -9999px;
@@ -1282,12 +1281,9 @@ footer p {
   -khtml-opacity: 0.6;
   -moz-opacity: 0.6;
   opacity: 0.6;
-  -webkit-animation-duration: 1.0s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-out;
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 #s-profile.product #flavor-profile #chart ul li:hover, #s-profile.product #flavor-profile #chart ul li.hover {
   filter: alpha(opacity=100);
@@ -1298,106 +1294,34 @@ footer p {
 #s-profile.product #flavor-profile #chart ul #agave {
   left: 13px;
   background-color: #1dc9d4;
-  -webkit-animation-name: bar-agave;
 }
 #s-profile.product #flavor-profile #chart ul #bitter {
   left: 57px;
   background-color: #c7f584;
-  -webkit-animation-name: bar-bitter;
 }
 #s-profile.product #flavor-profile #chart ul #sweet {
   left: 101px;
   background-color: #feefa7;
-  -webkit-animation-name: bar-sweet;
 }
 #s-profile.product #flavor-profile #chart ul #herbal {
   left: 145px;
   background-color: #3dba4c;
-  -webkit-animation-name: bar-herbal;
 }
 #s-profile.product #flavor-profile #chart ul #citrus {
   left: 189px;
   background-color: #fee05d;
-  -webkit-animation-name: bar-citrus;
 }
 #s-profile.product #flavor-profile #chart ul #floral {
   left: 233px;
   background-color: #e76f98;
-  -webkit-animation-name: bar-floral;
 }
 #s-profile.product #flavor-profile #chart ul #spice {
   left: 277px;
   background-color: #e8441b;
-  -webkit-animation-name: bar-spice;
 }
 #s-profile.product #flavor-profile #chart ul #wood {
   left: 321px;
   background-color: #913e12;
-  -webkit-animation-name: bar-wood;
-}
-@-webkit-keyframes bar-agave {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 63px;
-  }
-}
-@-webkit-keyframes bar-bitter {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 41px;
-  }
-}
-@-webkit-keyframes bar-sweet {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 85px;
-  }
-}
-@-webkit-keyframes bar-herbal {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 51px;
-  }
-}
-@-webkit-keyframes bar-citrus {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 11px;
-  }
-}
-@-webkit-keyframes bar-floral {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 29px;
-  }
-}
-@-webkit-keyframes bar-spice {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 38px;
-  }
-}
-@-webkit-keyframes bar-wood {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 41px;
-  }
 }
 #s-profile.product #expert-quotes blockquote {
   margin: 0 0 10px 240px;

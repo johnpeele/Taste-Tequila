@@ -294,26 +294,17 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #s-profile.product #product-rating .ratings { margin-bottom: 0; } 
 #s-profile.product #flavor-profile #chart { margin-bottom: 10px; width: 370px; height: 168px; float: right; position: relative; background: url(/images/bg_flavor-profile-chart.png) no-repeat; }
 #s-profile.product #flavor-profile #chart ul { width: 370px; height: 168px; }
-#s-profile.product #flavor-profile #chart ul li { margin: 0; width: 35px; height: 100px; position: absolute; bottom: 51px; text-indent: -9999px; background-color: @beige; .opacity(60);  -webkit-animation-duration: 1.0s; -webkit-animation-iteration-count: 1; -webkit-animation-timing-function: ease-out; .transition(all 0.3s linear); }
+#s-profile.product #flavor-profile #chart ul li { margin: 0; width: 35px; position: absolute; bottom: 51px; text-indent: -9999px; background-color: @beige; .opacity(60); .transition(opacity 0.3s linear); }
 #s-profile.product #flavor-profile #chart ul li:hover,
 #s-profile.product #flavor-profile #chart ul li.hover { .opacity(100); }
-#s-profile.product #flavor-profile #chart ul #agave { left: 13px; background-color: #1dc9d4; -webkit-animation-name: bar-agave; }
-#s-profile.product #flavor-profile #chart ul #bitter { left: 57px; background-color: #c7f584; -webkit-animation-name: bar-bitter; }
-#s-profile.product #flavor-profile #chart ul #sweet { left: 101px; background-color: #feefa7; -webkit-animation-name: bar-sweet; }
-#s-profile.product #flavor-profile #chart ul #herbal { left: 145px; background-color: #3dba4c; -webkit-animation-name: bar-herbal; }
-#s-profile.product #flavor-profile #chart ul #citrus { left: 189px; background-color: #fee05d; -webkit-animation-name: bar-citrus; }
-#s-profile.product #flavor-profile #chart ul #floral { left: 233px; background-color: #e76f98; -webkit-animation-name: bar-floral; }
-#s-profile.product #flavor-profile #chart ul #spice { left: 277px; background-color: #e8441b; -webkit-animation-name: bar-spice; }
-#s-profile.product #flavor-profile #chart ul #wood { left: 321px; background-color: #913e12; -webkit-animation-name: bar-wood; }
-
-@-webkit-keyframes bar-agave { 0% { height: 0; } 100% { height: 63px; } }
-@-webkit-keyframes bar-bitter { 0% { height: 0; } 100% { height: 41px; } }
-@-webkit-keyframes bar-sweet { 0% { height: 0; } 100% { height: 85px; } }
-@-webkit-keyframes bar-herbal { 0% { height: 0; } 100% { height: 51px; } }
-@-webkit-keyframes bar-citrus { 0% { height: 0; } 100% { height: 11px; } }
-@-webkit-keyframes bar-floral { 0% { height: 0; } 100% { height: 29px; } }
-@-webkit-keyframes bar-spice { 0% { height: 0; } 100% { height: 38px; } }
-@-webkit-keyframes bar-wood { 0% { height: 0; } 100% { height: 41px; } }
+#s-profile.product #flavor-profile #chart ul #agave { left: 13px; background-color: #1dc9d4; }
+#s-profile.product #flavor-profile #chart ul #bitter { left: 57px; background-color: #c7f584; }
+#s-profile.product #flavor-profile #chart ul #sweet { left: 101px; background-color: #feefa7; }
+#s-profile.product #flavor-profile #chart ul #herbal { left: 145px; background-color: #3dba4c; }
+#s-profile.product #flavor-profile #chart ul #citrus { left: 189px; background-color: #fee05d; }
+#s-profile.product #flavor-profile #chart ul #floral { left: 233px; background-color: #e76f98; }
+#s-profile.product #flavor-profile #chart ul #spice { left: 277px; background-color: #e8441b; }
+#s-profile.product #flavor-profile #chart ul #wood { left: 321px; background-color: #913e12; }
 
 #s-profile.product #expert-quotes blockquote { margin: 0 0 10px 240px; padding: 0 0 15px; background: url(/images/bg_divider-light.png) bottom left no-repeat; }
 #s-profile.product #expert-quotes blockquote:last-child,

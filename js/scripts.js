@@ -39,6 +39,17 @@ $(document).ready(function() {
     function() { $(this).addClass('hover') },
     function() { $(this).removeClass('hover') }
   );
+  
+  /* Flavor Profile Chart animation
+	================================================== */
+  $('#chart li').each(function() {
+    $(this)
+      .data('origHeight', $(this).height())
+      .height(0)
+      .animate({
+        height: $(this).data('origHeight')
+      }, 1200);
+  });
 
 	/* Tabs Activiation
 	================================================== */
