@@ -50,6 +50,13 @@ $(document).ready(function() {
         height: $(this).data('origHeight')
       }, 1200);
   });
+  
+  /* Gallery Video Play on hover
+	================================================== */
+  $('#gallery .video-play').hover(
+    function() { $(this).addClass('hover') },
+    function() { $(this).removeClass('hover') }
+  );
 
 	/* Tabs Activiation
 	================================================== */

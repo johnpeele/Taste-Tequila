@@ -28,7 +28,7 @@
 
 </head>
 
-<body id="s-community">
+<body id="s-profile" class="bar">
 
   <div id="header-wrapper">
     <header id="mast" class="container container-twelve">
@@ -95,15 +95,47 @@
   </div> <!-- /#header-wrapper -->
   
   <div id="content" class="container container-twelve">
-    <header id="content-header" class="twelve columns">
-      <div class="promo two-thirds column alpha">
-        (this will be a succinct purpose statement)
-      </div> <!-- /.promo -->
-      <div class="promo one-third column omega">
-        (this could be a registration promo)
-      </div> <!-- /.promo -->
-    </header> <!-- /#content-header -->
     <section id="main" class="two-thirds column">
+      <div id="profile" class="clearfix">
+        <img src="/images/pic_placeholder-bar-logo.jpg" class="avatar" alt="Placeholder Logo" />
+        <span class="tape"></span>
+        <div id="details">
+          <h1>Tres Tequila Lounge</h1>
+          <ul class="location">
+            <li>130 Townsend Street, 2nd</li>
+            <li>San Francisco, CA</li>
+            <li>94107</li>
+          </ul>
+          <ul class="contact">
+            <li><a href="#">Website</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div> <!-- /#details -->
+        <p id="likes"><a href="#">58</a></p> <!-- /#likes -->
+      </div> <!-- /#profile -->
+      <div id="gallery">
+        <div class="title subnav">
+          <h2>Gallery</h2>
+          <ul class="tabs">
+            <li><a href="#" class="active">All</a></li>
+            <li><a href="#">Photos</a></li>
+            <li><a href="#">Videos</a></li>
+          </ul>
+        </div> <!-- /.title -->
+        <ul id="thumbs">
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /><span class="video-play"></span></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /><span class="video-play"></span></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+          <li><a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo" /></a></li>
+        </ul>
+      </div> <!-- /#gallery -->
       <div id="activity-feed">
         <div class="title subnav">
           <h2>Community Activity</h2>
@@ -115,7 +147,7 @@
             <li><a href="#">Achievements</a></li>
             <li><a href="#">Blog &amp; News</a></li>
           </ul>
-        </div> <!-- /.title -->
+        </div> <!-- /.subnav -->
         <div class="feed-item comment">
           <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
           <div class="act">
@@ -157,58 +189,34 @@
     </section> <!-- /#main -->
     <section id="sidebar" class="one-third column">
       <div id="nodes">
-        <div class="node">
-          <h3>Top Rated Tequilas</h3>
+        <div class="node google-map">
+          <h3>Google Map</h3>
+          <img src="/images/pic_placeholder-google-map.png" alt="Google Map" />
+        </div> <!-- /.node -->
+        <div class="node on-the-shelf">
+          <h3>What's On The Shelf</h3>
           <ul class="ratings-list">
             <li class="leader">
-              <span class="position">1</span>
               <a href="#">Fortaleza Tequila Reposado Extra Long</a>
               <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">96</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
             </li>
             <li>
-              <span class="position">2</span>
               <a href="#">Jose Cuervo Reserva de Familia</a>
               <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">100</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
             </li>
             <li>
-              <span class="position">3</span>
               <a href="#">Fortaleza Tequila Reposado</a>
               <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">96</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
             </li>
             <li>
-              <span class="position">4</span>
               <a href="#">Fortaleza Tequila Reposado</a>
               <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">96</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
             </li>
             <li>
-              <span class="position">5</span>
               <a href="#">Fortaleza Tequila Reposado</a>
               <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">96</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
             </li>
           </ul>
-        </div> <!-- /.node -->
-        <div class="node">
-          <h3>Top Rated Brands</h3>
-          <ul class="ratings-list">
-            <li class="leader">
-              <span class="position">1</span>
-              <a href="#">Fortaleza</a>
-              <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">96</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
-            </li>
-            <li>
-              <span class="position">2</span>
-              <a href="#">Jose Cuervo</a>
-              <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">96</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
-            </li>
-            <li>
-              <span class="position">3</span>
-              <a href="#">Fortaleza Family</a>
-              <div class="ratings"><span class="rating-expert" rel="tipsy" title="Expert">93</span><span class="rating-community" rel="tipsy" title="Community">96</span><span class="rating-personal" rel="tipsy" title="Rate This Tequila!"><a href="#">?</a></span></div>
-            </li>
-          </ul>
-        </div> <!-- /.node -->
-        <div class="node">
-          <h3>Top Rated Tequilas</h3>
         </div> <!-- /.node -->
       </div> <!-- /#nodes -->
     </section> <!-- /#sidebar -->

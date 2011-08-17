@@ -122,8 +122,8 @@ input[type="checkbox"] { display: inline; }
 
 /* main ---------------------------------------- */
 #main { }
-#main header.title { }
-#main header.title h2 { margin-bottom: 12px; font-size: 40px; }
+#main .title { }
+#main .title h2 { margin-bottom: 12px; font-size: 34px; }
 
 /* sidebar general ---------------------------------------- */
 #sidebar {  }
@@ -185,7 +185,7 @@ input[type="checkbox"] { display: inline; }
 	footer
 
 --------------------------------------------------------------------------------------------- */
-#footer-wrapper { background: #fff url(/images/bg_footer-wrapper.png) 0 0 repeat-x; }
+#footer-wrapper { background: url(/images/bg_footer-wrapper.png) 0 0 repeat-x; }
 footer.container { padding-top: 36px; height: 108px; position: relative; }
 footer h3 { margin-left: 10px; width: 200px; height: 54px; position: absolute; bottom: 0; }
 footer h3 a { width: 200px; height: 54px; display: block; text-indent: -9999px; background: url(/images/bg_logo-h3.png) no-repeat; }
@@ -193,6 +193,12 @@ footer ul.nav-tabs li { margin-right: 5px; }
 footer ul.nav-tabs a { padding: 11px 10px 7px 10px; display: block; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; }
 footer ul.nav-tabs a:hover { text-decoration: none; }
 footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
+
+#footer-wrapper.footer-short { width: 100%; position: fixed; bottom: 0; }
+#footer-wrapper.footer-short footer.container { padding-top: 18px; height: 54px; }
+#footer-wrapper.footer-short footer h3 { top: 12px; }
+#footer-wrapper.footer-short footer ul.nav-tabs { position: absolute; top: 19px; left: 250px; }
+#footer-wrapper.footer-short footer p { margin-top: 12px; }
 
 
 /* #Page Styles
@@ -206,7 +212,8 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #s-community #content { padding-top: 18px; }
 #activity-feed { }
 #activity-feed .feed-item { padding: 25px 0 25px 60px; background: url(/images/bg_divider.png) bottom left no-repeat; }
-#activity-feed .feed-item:first-child { padding-top: 0; }
+#activity-feed .title + .feed-item,
+#activity-feed .subnav + .feed-item { padding-top: 0; }
 #activity-feed .feed-item > a img { margin-left: -60px; float: left; .img-square(40px); }
 #activity-feed .feed-item .act { padding-right: 55px; background-position: top right; background-repeat: no-repeat; }
 #activity-feed .feed-item p { margin-bottom: 10px; font-size: 12px; font-family: "ClarendonFSMedium"; color: @gray-light; }
@@ -315,13 +322,26 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #s-profile.product #expert-quotes blockquote cite a + a { margin-top: 15px; display: inline-block; }
 #s-profile.product #expert-quotes blockquote cite a:hover + a { text-decoration: underline; color: @link-hover-color; }
 
+/* bar & retailer profile ---------------------------------------- */
+#s-profile.bar #profile { background: @beige-lighter url(/images/bg_profile-bar-retailer.jpg) 0 50% no-repeat; }
+#s-profile.bar #profile #likes { padding-top: 20px; width: 116px; height: 52px; position: absolute; top: 80px; right: 22px; text-align: center; font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; background: url(/images/bg_profile-likes.png) no-repeat; .rotate(-10deg); }
+#s-profile.bar #profile #likes a:hover { text-decoration: none; }
+
+#s-profile.bar #gallery { margin-bottom: 54px; }
+#s-profile.bar #thumbs { padding: 10px; background: @beige-lighter; border-bottom: 1px solid #e0dcd3; .rounded(5px); .clearfix; }
+#s-profile.bar #thumbs li { margin: 10px; width: 100px; float: left; display: inline; position: relative; }
+#s-profile.bar #thumbs li a { width: 90px; height: 90px; display: block; }
+#s-profile.bar #thumbs li img { .img-square(90px); }
+#s-profile.bar #thumbs li span.video-play { width: 36px; height: 36px; position: absolute; top: 31px; left: 32px; background: url(/images/bg_gallery-video-play.png) no-repeat; .opacity(80); }
+#s-profile.bar #thumbs li a:hover span.video-play { .opacity(100); }
+
 /* ---------------------------------------------------------------------------------------------
 
 	rating page
 
 --------------------------------------------------------------------------------------------- */
 #s-rating { }
-#s-rating #main header.title { position: relative; }
+#s-rating #main .title { position: relative; }
 #main #rating-progress { width: 300px; height: 54px; position: absolute; top: 0; right: 0; background-repeat: no-repeat; }
 #main #rating-progress.progress-1 { background-image: url(/images/bg_rating-progress-1.png); }
 #main #rating-progress.progress-2 { background-image: url(/images/bg_rating-progress-2.png); }
