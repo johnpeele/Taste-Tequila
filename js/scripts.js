@@ -33,6 +33,14 @@ $(document).ready(function() {
   $('[rel=tipsy-top]').tipsy({gravity: 's', opacity: 1});
   $('[rel=tipsy-top-html]').tipsy({gravity: 's', html: 'true', opacity: 1});
   
+  /* Brand Profile - show/hide categories
+	================================================== */
+	$('.group .singles').hide();
+	$('.group h3').click(function() {
+    // $(this).toggleClass('selected').parent().find('.singles').slideToggle();
+    $(this).toggleClass('selected').parent().find('.singles').animate({ 'height': 'toggle', 'opacity': 'toggle' }, 500);
+	});
+  
   /* Flavor Profile Chart on hover
 	================================================== */
   $('#chart li').hover(
@@ -50,6 +58,30 @@ $(document).ready(function() {
         height: $(this).data('origHeight')
       }, 1200);
   });
+  
+  /* Like Toggle
+	================================================== */
+  $('#like-toggle a').toggle(function (){
+    $(this).addClass('liked')
+    $(this).text('You Like!')
+    return false;
+  }, function(){
+    $(this).removeClass('liked')
+    $(this).text('Like?')
+    return false;
+  });
+  
+  /* Bar Profile - show/hide fans
+	================================================== */
+	$('#likes a').click(function() {
+    $('#fans').animate({ 'height': 'toggle', 'opacity': 'toggle' }, 500);
+    return false;
+	});
+	
+	$('#hide-fans').click(function() {
+    $('#fans').animate({ 'height': 'toggle', 'opacity': 'toggle' }, 500);
+    return false;
+	});
   
   /* Gallery Video Play on hover
 	================================================== */
@@ -86,14 +118,6 @@ $(document).ready(function() {
 			} 
 		});
 	}); 
-	
-	/* Brand Profile - show/hide categories
-	================================================== */
-	$('.group .singles').hide();
-	$('.group h3').click(function() {
-    // $(this).toggleClass('selected').parent().find('.singles').slideToggle();
-    $(this).toggleClass('selected').parent().find('.singles').animate({ "height": "toggle", "opacity": "toggle" }, 500);
-	});
 	
 	/* Self-labeled form fields
 	================================================== */

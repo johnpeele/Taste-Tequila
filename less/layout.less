@@ -62,7 +62,7 @@ label { margin: 8px 20px 0 0; width: 140px; float: left; display: block; font: 1
 select { width: 220px; }
 input[type="checkbox"] { display: inline; }
 
-.form-item { padding: 20px; overflow: hidden; background: url(/images/bg_divider-light.png) bottom left no-repeat; }
+.form-item { padding: 20px; overflow: hidden; /* simple clearfix */ background: url(/images/bg_divider-light.png) bottom left no-repeat; }
 .form-item .field { width: 300px; float: left; }
 .form-item .field p.notes { margin: 5px 0 0 0; font: 10px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; color: @gray-light; }
 
@@ -128,7 +128,7 @@ input[type="checkbox"] { display: inline; }
 /* sidebar general ---------------------------------------- */
 #sidebar {  }
 #sidebar #nodes { }
-#sidebar .node { padding: 10px; position: relative; display: block; overflow: hidden; background-color: @beige-lighter; border-top: 4px solid #f1ead8; }
+#sidebar .node { padding: 10px; position: relative; display: block; overflow: hidden; /* simple clearfix */ background-color: @beige-lighter; border-top: 4px solid #f1ead8; }
 #sidebar .node:first-child { background: @beige-lighter url(/images/bg_node.png) repeat-x; border-top: none; .border-radius(5px, 5px, 0, 0); }
 #sidebar .node:last-child,
 #sidebar .node.lastnode { border-bottom: 1px solid #e0dcd3; .border-radius( 0, 0, 5px, 5px); }
@@ -147,7 +147,7 @@ input[type="checkbox"] { display: inline; }
 
 /* sidebar - ratings list ---------------------------------------- */
 #sidebar .node .ratings-list { margin: 0; }
-#sidebar .node .ratings-list li { padding-bottom: 10px; height: 54px; overflow: hidden; background: url(/images/bg_divider.png) bottom center no-repeat; }
+#sidebar .node .ratings-list li { padding-bottom: 10px; height: 54px; overflow: hidden; /* simple clearfix */ background: url(/images/bg_divider.png) bottom center no-repeat; }
 #sidebar .node .ratings-list li:last-child,
 #sidebar .node .ratings-list li.last { background: none; }
 #sidebar .node .ratings-list span.position { margin-right: 10px; width: 18px; height: 52px; float: left; font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-align: center; background-color: @beige-light; border: 1px solid @beige; .rounded(5px); }
@@ -324,16 +324,30 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 /* bar & retailer profile ---------------------------------------- */
 #s-profile.bar #profile { background: @beige-lighter url(/images/bg_profile-bar-retailer.jpg) 0 50% no-repeat; }
-#s-profile.bar #profile #likes { padding-top: 20px; width: 116px; height: 52px; position: absolute; top: 80px; right: 22px; text-align: center; font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; background: url(/images/bg_profile-likes.png) no-repeat; .rotate(-10deg); }
+#s-profile.bar #profile #likes { padding-top: 20px; width: 116px; height: 52px; position: absolute; top: 85px; right: 22px; text-align: center; font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif; background: url(/images/bg_profile-likes.png) no-repeat; .rotate(-10deg); }
 #s-profile.bar #profile #likes a:hover { text-decoration: none; }
+#s-profile.bar #profile #like-toggle a { padding: 10px 0 7px 30px; position: absolute; top: 205px; right: 50px; font: 11px/1 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; text-decoration: none; color: @gray-light; background: url(/images/bg_like-star.png) no-repeat; .transition(none); }
+#s-profile.bar #profile #like-toggle a:hover { color: @orange; }
+#s-profile.bar #profile #like-toggle a.liked { right: 38px; color: @orange; background-position: 0 -26px; }
 
+#s-profile.bar .thumbs { padding: 10px; background: @beige-lighter; border-bottom: 1px solid #e0dcd3; .rounded(5px); .clearfix; }
+#s-profile.bar .thumbs li { margin: 10px 10px 20px; width: 100px; float: left; display: inline; position: relative; }
+#s-profile.bar .thumbs li a { width: 90px; height: 90px; display: block; }
+#s-profile.bar .thumbs li img { .img-square(90px); }
+#s-profile.bar .thumbs li span.video-play { width: 36px; height: 36px; position: absolute; top: 31px; left: 32px; background: url(/images/bg_gallery-video-play.png) no-repeat; .opacity(80); }
+#s-profile.bar .thumbs li a:hover span.video-play { .opacity(100); }
+
+#s-profile.bar #fans { display: none; }
+#s-profile.bar #fans .title { overflow: hidden; /* simple clearfix */ }
+#s-profile.bar #fans .title h2 { float: left; }
+#s-profile.bar #fans a#hide-fans { margin-top: 18px; float: right; font: 10px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; text-decoration: underline; color: @gray-main; }
+#s-profile.bar #fans a#hide-fans:hover { color: @link-hover-color; }
+#s-profile.bar #fans .thumbs { margin-bottom: 54px; width: 600px; /* these two styles correct jquery animation jumpyness */ }
+#s-profile.bar #fans .thumbs li { margin: 10px 6px 20px 10px; width: 50px; }
+#s-profile.bar #fans .thumbs li a { width: 40px; height: 40px; }
+#s-profile.bar #fans .thumbs li img { .img-square(40px); }
 #s-profile.bar #gallery { margin-bottom: 54px; }
-#s-profile.bar #thumbs { padding: 10px; background: @beige-lighter; border-bottom: 1px solid #e0dcd3; .rounded(5px); .clearfix; }
-#s-profile.bar #thumbs li { margin: 10px; width: 100px; float: left; display: inline; position: relative; }
-#s-profile.bar #thumbs li a { width: 90px; height: 90px; display: block; }
-#s-profile.bar #thumbs li img { .img-square(90px); }
-#s-profile.bar #thumbs li span.video-play { width: 36px; height: 36px; position: absolute; top: 31px; left: 32px; background: url(/images/bg_gallery-video-play.png) no-repeat; .opacity(80); }
-#s-profile.bar #thumbs li a:hover span.video-play { .opacity(100); }
+
 
 /* ---------------------------------------------------------------------------------------------
 
@@ -352,7 +366,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #main #rating-progress #step-3 { left: 260px; }
 
 #main #rating-form { position: relative; background: @beige-lighter; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
-#main #rating-form header { padding: 20px; overflow: hidden; background: url(/images/bg_divider.png) bottom left no-repeat; }
+#main #rating-form header { padding: 20px; overflow: hidden; /* simple clearfix */ background: url(/images/bg_divider.png) bottom left no-repeat; }
 #main #rating-form header a img { margin: 0 10px 0 0; float: left; .img-square(40px); }
 #main #rating-form header h1 { width: 380px; float: left; font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; }
 #main #rating-form header a#rate-different { margin-top: 9px; float: right; font: 10px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; text-decoration: underline; color: @gray-main; }

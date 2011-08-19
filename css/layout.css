@@ -376,6 +376,7 @@ input[type="checkbox"] {
 .form-item {
   padding: 20px;
   overflow: hidden;
+  /* simple clearfix */
   background: url(/images/bg_divider-light.png) bottom left no-repeat;
 }
 .form-item .field {
@@ -599,6 +600,7 @@ input[type="checkbox"] {
   position: relative;
   display: block;
   overflow: hidden;
+  /* simple clearfix */
   background-color: #fffdf6;
   border-top: 4px solid #f1ead8;
 }
@@ -662,6 +664,7 @@ input[type="checkbox"] {
   padding-bottom: 10px;
   height: 54px;
   overflow: hidden;
+  /* simple clearfix */
   background: url(/images/bg_divider.png) bottom center no-repeat;
 }
 #sidebar .node .ratings-list li:last-child, #sidebar .node .ratings-list li.last {
@@ -1399,7 +1402,7 @@ footer p {
   width: 116px;
   height: 52px;
   position: absolute;
-  top: 80px;
+  top: 85px;
   right: 22px;
   text-align: center;
   font: 40px/1 "ClarendonFSBold", Georgia, "Times New Roman", Times, serif;
@@ -1412,10 +1415,29 @@ footer p {
 #s-profile.bar #profile #likes a:hover {
   text-decoration: none;
 }
-#s-profile.bar #gallery {
-  margin-bottom: 54px;
+#s-profile.bar #profile #like-toggle a {
+  padding: 10px 0 7px 30px;
+  position: absolute;
+  top: 205px;
+  right: 50px;
+  font: 11px/1 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #999999;
+  background: url(/images/bg_like-star.png) no-repeat;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
 }
-#s-profile.bar #thumbs {
+#s-profile.bar #profile #like-toggle a:hover {
+  color: #fe6a00;
+}
+#s-profile.bar #profile #like-toggle a.liked {
+  right: 38px;
+  color: #fe6a00;
+  background-position: 0 -26px;
+}
+#s-profile.bar .thumbs {
   padding: 10px;
   background: #fffdf6;
   border-bottom: 1px solid #e0dcd3;
@@ -1425,26 +1447,26 @@ footer p {
   -webkit-background-clip: padding-box;
   zoom: 1;
 }
-#s-profile.bar #thumbs:after {
+#s-profile.bar .thumbs:after {
   display: block;
   visibility: hidden;
   height: 0;
   clear: both;
   content: ".";
 }
-#s-profile.bar #thumbs li {
-  margin: 10px;
+#s-profile.bar .thumbs li {
+  margin: 10px 10px 20px;
   width: 100px;
   float: left;
   display: inline;
   position: relative;
 }
-#s-profile.bar #thumbs li a {
+#s-profile.bar .thumbs li a {
   width: 90px;
   height: 90px;
   display: block;
 }
-#s-profile.bar #thumbs li img {
+#s-profile.bar .thumbs li img {
   padding: 5px;
   width: 90px;
   height: 90px;
@@ -1455,7 +1477,7 @@ footer p {
   border-radius: 5px;
   -webkit-background-clip: padding-box;
 }
-#s-profile.bar #thumbs li span.video-play {
+#s-profile.bar .thumbs li span.video-play {
   width: 36px;
   height: 36px;
   position: absolute;
@@ -1467,11 +1489,59 @@ footer p {
   -moz-opacity: 0.8;
   opacity: 0.8;
 }
-#s-profile.bar #thumbs li a:hover span.video-play {
+#s-profile.bar .thumbs li a:hover span.video-play {
   filter: alpha(opacity=100);
   -khtml-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+}
+#s-profile.bar #fans {
+  display: none;
+}
+#s-profile.bar #fans .title {
+  overflow: hidden;
+  /* simple clearfix */
+}
+#s-profile.bar #fans .title h2 {
+  float: left;
+}
+#s-profile.bar #fans a#hide-fans {
+  margin-top: 18px;
+  float: right;
+  font: 10px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #5d5b57;
+}
+#s-profile.bar #fans a#hide-fans:hover {
+  color: #b24a00;
+}
+#s-profile.bar #fans .thumbs {
+  margin-bottom: 54px;
+  width: 600px;
+  /* these two styles correct jquery animation jumpyness */
+}
+#s-profile.bar #fans .thumbs li {
+  margin: 10px 6px 20px 10px;
+  width: 50px;
+}
+#s-profile.bar #fans .thumbs li a {
+  width: 40px;
+  height: 40px;
+}
+#s-profile.bar #fans .thumbs li img {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dcd3;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+#s-profile.bar #gallery {
+  margin-bottom: 54px;
 }
 /* ---------------------------------------------------------------------------------------------
 
@@ -1527,6 +1597,7 @@ footer p {
 #main #rating-form header {
   padding: 20px;
   overflow: hidden;
+  /* simple clearfix */
   background: url(/images/bg_divider.png) bottom left no-repeat;
 }
 #main #rating-form header a img {
