@@ -579,15 +579,7 @@ input[type="checkbox"] {
 
 --------------------------------------------------------------------------------------------- */
 #content {
-  padding: 36px 0;
-}
-#content-header {
-  margin-bottom: 18px;
-}
-#content-header .promo {
-  height: 90px;
-  color: #999999;
-  background-color: #efede8;
+  padding: 36px 0 72px;
 }
 /* main ---------------------------------------- */
 #main .title h2 {
@@ -595,6 +587,12 @@ input[type="checkbox"] {
   font-size: 34px;
 }
 /* sidebar general ---------------------------------------- */
+#sidebar #registration {
+  margin-bottom: 18px;
+  height: 90px;
+  color: #999999;
+  background-color: #efede8;
+}
 #sidebar .node {
   padding: 10px;
   position: relative;
@@ -880,6 +878,41 @@ footer p {
 --------------------------------------------------------------------------------------------- */
 #s-community #content {
   padding-top: 18px;
+}
+#purpose {
+  margin-bottom: 36px;
+  padding: 10px;
+  height: 394px;
+  position: relative;
+  background-color: #5d5b57;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.16);
+}
+#purpose img {
+  width: 600px;
+  height: 394px;
+}
+#purpose p {
+  width: 621px;
+  height: 101px;
+  position: absolute;
+  top: 36px;
+  left: -24px;
+  text-indent: -9999px;
+  background: url(/images/bg_purpose-banner.png) no-repeat;
+}
+#purpose p a {
+  width: 100px;
+  height: 66px;
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 21px;
 }
 #activity-feed .feed-item {
   padding: 25px 0 25px 60px;
