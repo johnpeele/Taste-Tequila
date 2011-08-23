@@ -92,32 +92,29 @@ $(document).ready(function() {
   
   /* Rating Form Sliders
 	================================================== */
-	$('.slider').slider({
+	var $callout = $('<div class="callout" />').hide();	  
+    
+  $('.slider').slider({
 	  orientation: 'horizontal',
 		min: 0,
 		max: 100,
+		value: 50,
 		range: "min",
 		animate: true,
-		start: function(event, ui){
-      $('.amount').empty();
-      slide_int = setInterval(update_slider, 10);     
-    },
-    slide: function(event, ui){
-      setTimeout(update_slider, 10);  
+		slide: function(event, ui){
+      $(this).find('.callout').fadeIn();
+  		$(this).find('.callout').text(ui.value);  
     },
     stop: function(event, ui){
-      clearInterval(slide_int);
-      slide_int = null;
+      // $(this).find('.callout').fadeOut();
+    },
+    change: function(event, ui){
+      $(this).closest('.field').find("input:hidden:first").val(ui.value);
     }
 	});
 	
-	function update_slider(){
-    var position = $('.ui-slider-handle').position();
-    var value = $('.slider').slider('option', 'value');
+	$('.ui-slider-handle').append($callout);
 
-    $('.amount').text(value).css({left:position.left});
-    $('.amount').fadeIn();
-  }
 
 	/* Tabs Activiation
 	================================================== */

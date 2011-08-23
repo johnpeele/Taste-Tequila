@@ -375,9 +375,15 @@ input[type="checkbox"] {
 }
 .form-item {
   padding: 20px;
-  overflow: hidden;
-  /* simple clearfix */
   background: url(/images/bg_divider-light.png) bottom left no-repeat;
+  zoom: 1;
+}
+.form-item:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  content: ".";
 }
 .form-item .field {
   width: 300px;
@@ -1697,6 +1703,7 @@ footer p {
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
+  text-decoration: none;
   background: #eeeeee url(/images/bg_ui-slider-handle.png) 0 -20px no-repeat;
   border: 1px solid #aaa;
 }
@@ -1765,12 +1772,35 @@ footer p {
 .ui-slider-horizontal .ui-slider-range-max {
   right: 0;
 }
+.form-item.rating-slider label {
+  margin-top: 14px;
+}
 .form-item.rating-slider .field {
+  margin: 18px 0;
   position: relative;
 }
-.form-item.rating-slider .field .amount {
-  margin-top: 10px;
+.form-item.rating-slider .field .callout {
+  margin-left: -6px;
+  padding-top: 6px;
+  width: 35px;
+  height: 24px;
   position: absolute;
+  top: -32px;
+  font: 13px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000000;
+  background: url(/images/bg_ui-slider-callout.png) top center no-repeat;
+}
+.form-item.rating-slider .field .lower-range, .form-item.rating-slider .field .upper-range {
+  position: absolute;
+  top: 25px;
+  font: 10px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+.form-item.rating-slider .field .upper-range {
+  right: 0;
+  text-align: right;
 }
 /* sidebar - lowdown ---------------------------------------- */
 #s-rating #sidebar .node.lowdown {
