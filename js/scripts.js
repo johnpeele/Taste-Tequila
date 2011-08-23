@@ -89,6 +89,35 @@ $(document).ready(function() {
     function() { $(this).addClass('hover') },
     function() { $(this).removeClass('hover') }
   );
+  
+  /* Rating Form Sliders
+	================================================== */
+	$('.slider').slider({
+	  orientation: 'horizontal',
+		min: 0,
+		max: 100,
+		range: "min",
+		animate: true,
+		start: function(event, ui){
+      $('.amount').empty();
+      slide_int = setInterval(update_slider, 10);     
+    },
+    slide: function(event, ui){
+      setTimeout(update_slider, 10);  
+    },
+    stop: function(event, ui){
+      clearInterval(slide_int);
+      slide_int = null;
+    }
+	});
+	
+	function update_slider(){
+    var position = $('.ui-slider-handle').position();
+    var value = $('.slider').slider('option', 'value');
+
+    $('.amount').text(value).css({left:position.left});
+    $('.amount').fadeIn();
+  }
 
 	/* Tabs Activiation
 	================================================== */

@@ -1633,13 +1633,13 @@ footer p {
   border-radius: 5px;
   -webkit-background-clip: padding-box;
 }
-#main #rating-form header {
+#main #rating-form #rating-header {
   padding: 20px;
   overflow: hidden;
   /* simple clearfix */
   background: url(/images/bg_divider.png) bottom left no-repeat;
 }
-#main #rating-form header a img {
+#main #rating-form #rating-header a img {
   margin: 0 10px 0 0;
   float: left;
   padding: 5px;
@@ -1652,13 +1652,13 @@ footer p {
   border-radius: 5px;
   -webkit-background-clip: padding-box;
 }
-#main #rating-form header h1 {
+#main #rating-form #rating-header h1 {
   width: 380px;
   float: left;
   font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
   text-transform: none;
 }
-#main #rating-form header a#rate-different {
+#main #rating-form #rating-header a#rate-different {
   margin-top: 9px;
   float: right;
   font: 10px/1 "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1666,8 +1666,111 @@ footer p {
   text-decoration: underline;
   color: #5d5b57;
 }
-#main #rating-form header a#rate-different:hover {
+#main #rating-form #rating-header a#rate-different:hover {
   color: #b24a00;
+}
+/* jquery ui slider ---------------------------------------- */
+/* component containers */
+.ui-widget-content {
+  border: 1px solid #e6e1cf;
+  background: #f9f6ea;
+}
+.ui-widget-header {
+  background: #ffff99;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+}
+/* interaction states */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  background: #eeeeee url(/images/bg_ui-slider-handle.png) 0 0 no-repeat;
+  border: 1px solid #c6c6c6;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+  color: #1c94c4;
+  text-decoration: none;
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+  background: #eeeeee url(/images/bg_ui-slider-handle.png) 0 -20px no-repeat;
+  border: 1px solid #aaa;
+}
+.ui-state-hover a, .ui-state-hover a:hover {
+  color: #c77405;
+  text-decoration: none;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+  background: #eeeeee url(/images/bg_ui-slider-handle.png) 0 -40px no-repeat;
+  border: 1px solid #888;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+  color: #eb8f00;
+  text-decoration: none;
+}
+.ui-widget :active {
+  outline: none;
+}
+/* corner radius */
+.ui-corner-all {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-background-clip: padding-box;
+}
+/* slider */
+.ui-slider {
+  position: relative;
+}
+.ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 23px;
+  height: 20px;
+  cursor: pointer;
+}
+.ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border: 0;
+  background-position: 0 0;
+}
+.ui-slider-horizontal {
+  height: 14px;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -4px;
+  margin-left: -10px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+  /* removes <a> transitions */
+}
+.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+  left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+  right: 0;
+}
+.form-item.rating-slider .field {
+  position: relative;
+}
+.form-item.rating-slider .field .amount {
+  margin-top: 10px;
+  position: absolute;
 }
 /* sidebar - lowdown ---------------------------------------- */
 #s-rating #sidebar .node.lowdown {

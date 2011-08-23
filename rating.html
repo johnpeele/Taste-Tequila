@@ -105,11 +105,11 @@
         </div> <!-- /#rating-progress -->
       </div> <!-- /.title -->
       <div id="rating-form">
-        <header>
+        <div id="rating-header">
           <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
           <h1><a href="#">Casa Noble Single Barrel Reposado</a></h1>
           <a href="#" id="rate-different">Rate A Different Tequila</a>
-        </header>
+        </div> <!-- /#rating-header -->
         <form action="" class="rating-form">
           <div class="form-item txt">
             <label for="rating">Rating</label>
@@ -123,6 +123,13 @@
             <div class="field">
               <input type="text" value="" name="rating" size="30" />
               <p class="notes">This is a help message for this input.</p>
+            </div> <!-- /.field -->
+          </div> <!-- /.form-item -->
+          <div class="form-item rating-slider">
+            <label for="test-slider">Test Slider</label>
+            <div class="field">
+              <div class="slider"></div> <!-- /.slider -->
+              <div class="amount">0</div>
             </div> <!-- /.field -->
           </div> <!-- /.form-item -->
         </form>
@@ -168,6 +175,7 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
   <script>window.jQuery || document.write("<script src='/js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
   <script src="/js/libs/jquery.tipsy.js"></script>
+  <script src="/js/libs/jquery-ui-1.8.16.custom.min.js"></script>
   <script src="/js/scripts.js"></script>
   
 </body>
