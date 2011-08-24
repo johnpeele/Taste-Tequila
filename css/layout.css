@@ -395,9 +395,6 @@ input[type="checkbox"] {
   text-transform: uppercase;
   color: #999999;
 }
-.rating-form .form-item {
-  padding-left: 80px;
-}
 /* ---------------------------------------------------------------------------------------------
 
 	header - mast
@@ -1049,6 +1046,60 @@ footer p {
   background: url(/images/bg_avatar-tape.png) no-repeat;
   z-index: 2;
 }
+#s-profile #profile #edit-profile {
+  width: 69px;
+  position: absolute;
+  top: 130px;
+  padding: 11px 15px 8px;
+  display: inline-block;
+  font: 11px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fe6400;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fe8500), to(#fe6400));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#fe8500, #fe6400);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#fe8500, #fe6400);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe8500), color-stop(100%, #fe6400));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#fe8500, #fe6400);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#fe8500, #fe6400);
+  /* Opera 11.10 */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe8500', endColorstr='#fe6400', GradientType=0);
+  /* IE6 & IE7 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe8500', endColorstr='#fe6400', GradientType=0)";
+  /* IE8+ */
+
+  background-image: linear-gradient(#fe8500, #fe6400);
+  /* the standard */
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  border: 1px solid #dd6c00;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+#s-profile #profile #edit-profile:hover {
+  background-position: 0 -15px;
+  color: #ffffff;
+  text-decoration: none;
+}
 #s-profile #profile #details {
   padding: 0 20px 0 20px;
   width: 280px;
@@ -1674,6 +1725,9 @@ footer p {
 }
 #main #rating-form #rating-header a#rate-different:hover {
   color: #b24a00;
+}
+.rating-form .form-item {
+  padding-left: 80px;
 }
 /* jquery ui slider ---------------------------------------- */
 /* component containers */
