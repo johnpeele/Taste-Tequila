@@ -1871,11 +1871,15 @@ footer p {
   text-shadow: 0 1px 0 #000000;
   background: url(/images/bg_ui-slider-callout.png) top center no-repeat;
 }
-.form-item.rating-slider .field .lower-range, .form-item.rating-slider .field .upper-range {
+.form-item.rating-slider .field .lower-range, .form-item.rating-slider .field .mid-range, .form-item.rating-slider .field .upper-range {
   position: absolute;
   top: 25px;
   font: 10px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
+}
+.form-item.rating-slider .field .mid-range {
+  width: 300px;
+  text-align: center;
 }
 .form-item.rating-slider .field .upper-range {
   right: 0;
