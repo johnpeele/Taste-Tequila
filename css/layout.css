@@ -373,6 +373,61 @@ select {
 input[type="checkbox"], input[type="radio"] {
   cursor: pointer;
 }
+button, input[type=submit] {
+  padding: 11px 15px 8px;
+  display: inline-block;
+  font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  background-color: #fe6400;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#fe8500), to(#fe6400));
+  /* Konqueror */
+
+  background-image: -moz-linear-gradient(#fe8500, #fe6400);
+  /* FF 3.6+ */
+
+  background-image: -ms-linear-gradient(#fe8500, #fe6400);
+  /* IE10 */
+
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fe8500), color-stop(100%, #fe6400));
+  /* Safari 4+, Chrome 2+ */
+
+  background-image: -webkit-linear-gradient(#fe8500, #fe6400);
+  /* Safari 5.1+, Chrome 10+ */
+
+  background-image: -o-linear-gradient(#fe8500, #fe6400);
+  /* Opera 11.10 */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe8500', endColorstr='#fe6400', GradientType=0);
+  /* IE6 & IE7 */
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fe8500', endColorstr='#fe6400', GradientType=0)";
+  /* IE8+ */
+
+  background-image: linear-gradient(#fe8500, #fe6400);
+  /* the standard */
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  border: 1px solid #dd6c00;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+button:hover, input[type=submit]:hover {
+  background-position: 0 -15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+button::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 .form-item {
   padding: 20px;
   background: url(/images/bg_divider-light.png) bottom left no-repeat;
@@ -447,6 +502,9 @@ input[type="checkbox"], input[type="radio"] {
 .form-item.check .input-wrap.active label {
   background-color: #f9f6ea;
   border-color: #e6e1cf;
+}
+.actions {
+  padding: 20px;
 }
 /* ---------------------------------------------------------------------------------------------
 
@@ -1782,6 +1840,47 @@ footer p {
 .rating-form .form-item {
   padding-left: 80px;
 }
+.rating-form .actions {
+  padding: 36px 20px 18px 80px;
+}
+.rating-form .actions em {
+  padding: 0 15px;
+  font: italic 13px Georgia, "Times New Roman", Times, serif;
+}
+.form-item.rating-slider label {
+  margin-top: 14px;
+}
+.form-item.rating-slider .field {
+  margin: 18px 0 18px 160px;
+  position: relative;
+  float: none;
+}
+.form-item.rating-slider .field + .field {
+  margin-top: 54px;
+}
+.form-item.rating-slider .field .callout {
+  margin-left: -6px;
+  padding-top: 6px;
+  width: 35px;
+  height: 24px;
+  position: absolute;
+  top: -32px;
+  font: 13px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000000;
+  background: url(/images/bg_ui-slider-callout.png) top center no-repeat;
+}
+.form-item.rating-slider .field .lower-range, .form-item.rating-slider .field .upper-range {
+  position: absolute;
+  top: 25px;
+  font: 10px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+.form-item.rating-slider .field .upper-range {
+  right: 0;
+  text-align: right;
+}
 /* jquery ui slider ---------------------------------------- */
 /* component containers */
 .ui-widget-content {
@@ -1878,36 +1977,6 @@ footer p {
 }
 .ui-slider-horizontal .ui-slider-range-max {
   right: 0;
-}
-.form-item.rating-slider label {
-  margin-top: 14px;
-}
-.form-item.rating-slider .field {
-  margin: 18px 0;
-  position: relative;
-}
-.form-item.rating-slider .field .callout {
-  margin-left: -6px;
-  padding-top: 6px;
-  width: 35px;
-  height: 24px;
-  position: absolute;
-  top: -32px;
-  font: 13px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 0 1px 0 #000000;
-  background: url(/images/bg_ui-slider-callout.png) top center no-repeat;
-}
-.form-item.rating-slider .field .lower-range, .form-item.rating-slider .field .upper-range {
-  position: absolute;
-  top: 25px;
-  font: 10px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-}
-.form-item.rating-slider .field .upper-range {
-  right: 0;
-  text-align: right;
 }
 /* sidebar - lowdown ---------------------------------------- */
 #s-rating #sidebar .node.lowdown {
