@@ -115,6 +115,25 @@ $(document).ready(function() {
 	
 	$('.ui-slider-handle').append($callout);
 
+  /* Form Checkboxes and Radios
+	================================================== */
+  $('.input-wrap :checkbox, .input-wrap :radio').click(function() {
+    if ($(this).attr('checked')) {
+      $(this).parent().parent().addClass('active');
+    } else {
+      $(this).parent().parent().removeClass('active');
+    }
+  });
+  
+  $('.input-wrap label').click(function() {
+    if ($(this).parent().hasClass('active')) {
+      $(this).parent().removeClass('active');
+      $(this).parent().find('span input').removeAttr('checked');
+    } else {
+      $(this).parent().addClass('active');
+      $(this).parent().find('span input').attr('checked', true);
+    }
+  });
 
 	/* Tabs Activiation
 	================================================== */
