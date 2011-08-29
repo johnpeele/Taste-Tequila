@@ -33,6 +33,35 @@ $(document).ready(function() {
   $('[rel=tipsy-top]').tipsy({gravity: 's', opacity: 1});
   $('[rel=tipsy-top-html]').tipsy({gravity: 's', html: 'true', opacity: 1});
   
+  /* Tabs Activation
+	================================================== */
+	var tabs = $('ul.tabs');
+
+	tabs.each(function(i) {
+
+		//Get all tabs
+		var tab = $(this).find('> li > a');
+		tab.click(function(e) {
+
+			//Get Location of tab's content
+			var contentLocation = $(this).attr('href');
+
+			//Let go if not a hashed one
+			if(contentLocation.charAt(0)=="#") {
+
+				e.preventDefault();
+
+				//Make Tab Active
+				tab.removeClass('active');
+				$(this).addClass('active');
+
+				//Show Tab Content & add active class
+				$(contentLocation).show().addClass('active').siblings().hide().removeClass('active');
+
+			}
+		});
+	});
+  
   /* Brand Profile - show/hide categories
 	================================================== */
 	$('.group .singles').hide();
@@ -134,35 +163,6 @@ $(document).ready(function() {
       $(this).parent().find('span input').attr('checked', true);
     }
   });
-
-	/* Tabs Activiation
-	================================================== */
-	var tabs = $('ul.tabs'),
-	    tabsContent = $('ul.tabs-content');
-	
-	tabs.each(function(i) {
-		//Get all tabs
-		var tab = $(this).find('> li > a');
-		tab.click(function(e) {
-			
-			//Get Location of tab's content
-			var contentLocation = $(this).attr('href') + 'Tab';
-			
-			//Let go if not a hashed one
-			if(contentLocation.charAt(0)=='#') {
-			
-				e.preventDefault();
-			
-				//Make Tab Active
-				tab.removeClass('active');
-				$(this).addClass('active');
-				
-				//Show Tab Content
-				$(contentLocation).show().siblings().hide();
-				
-			} 
-		});
-	}); 
 	
 	/* Self-labeled form fields
 	================================================== */

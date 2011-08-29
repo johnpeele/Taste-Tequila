@@ -118,51 +118,102 @@
       <div id="activity-feed">
         <div class="subnav">
           <ul class="tabs">
-            <li><a href="#" class="active">All</a></li>
-            <li><a href="#">Comments</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Achievements</a></li>
-            <li><a href="#">Blog &amp; News</a></li>
-          </ul>
+            <li><a href="#feed-all" class="active">All</a></li>
+            <li><a href="#feed-comments">Comments</a></li>
+            <li><a href="#feed-reviews">Reviews</a></li>
+            <li><a href="#feed-events">Events</a></li>
+            <li><a href="#feed-achievements">Achievements</a></li>
+            <li><a href="#feed-news">Blog &amp; News</a></li>
+          </ul> <!-- /.tabs -->
         </div> <!-- /.subnav -->
-        <div class="feed-item comment">
-          <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
-          <div class="act">
-            <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
-            <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
-            <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
-          </div> <!-- /.act -->
-        </div> <!-- /.feed-item -->
-        <div class="feed-item review">
-          <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
-          <div class="act">
-            <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
-            <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
-            <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
-          </div> <!-- /.act -->
-        </div> <!-- /.feed-item -->
-        <div class="feed-item event">
-          <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
-          <div class="act">
-            <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
-            <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
-          </div> <!-- /.act -->
-        </div> <!-- /.feed-item -->
-        <div class="feed-item achievement">
-          <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
-          <div class="act">
-            <p><a href="#">Grover Sanschagrin</a> earned the <a href="#">Super Duper</a> achievement <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
-            <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
-          </div> <!-- /.act -->
-        </div> <!-- /.feed-item -->
-        <div class="feed-item news">
-          <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
-          <div class="act">
-            <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
-            <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
-          </div> <!-- /.act -->
-        </div> <!-- /.feed-item -->
+        <ul class="tabs-content">
+          <li id="feed-all" class="active">
+            <div class="feed-item comment">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+            <div class="feed-item review">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+            <div class="feed-item event">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+            <div class="feed-item achievement">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <p><a href="#">Grover Sanschagrin</a> earned the <a href="#">Super Duper</a> achievement <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+            <div class="feed-item news">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+          </li>
+          <li id="feed-comments">
+            <div class="feed-item comment">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+          </li>
+          <li id="feed-reviews">
+            <div class="feed-item review">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+          </li>
+          <li id="feed-events">
+            <div class="feed-item event">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+          </li>
+          <li id="feed-achievements">
+            <div class="feed-item achievement">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <p><a href="#">Grover Sanschagrin</a> earned the <a href="#">Super Duper</a> achievement <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+          </li>
+          <li id="feed-news">
+            <div class="feed-item news">
+              <a href="#"><img src="/images/avatar_default.png" alt="Avatar for User" /></a>
+              <div class="act">
+                <p><a href="#">Grover Sanschagrin</a> commented on <a href="#">Fortaleza Tequila Reposado</a> <time class="timeago" datetime="2011-07-04T21:33:12Z" title="Mon Jul 04 2011 17:33:12 GMT-0400 (EDT)">about an hour ago</time></p>
+                <quote><a href="#">This would be an excerpt from the comment. It would be linked to the actual page.</a></quote>
+              </div> <!-- /.act -->
+            </div> <!-- /.feed-item -->
+          </li>
+        </ul> <!-- /.tabs-content -->
       </div> <!-- /#activity-feed -->
     </section> <!-- /#main -->
     <section id="sidebar" class="one-third column">
