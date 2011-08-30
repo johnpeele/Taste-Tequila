@@ -98,7 +98,7 @@
     <section id="main" class="two-thirds column">
       <div class="title">
         <h2>Rate This Tequila</h2>
-        <div id="rating-progress" class="progress-2">
+        <div id="rating-progress" class="progress-1"> <!-- EVAN - update this class on each step of the rating progress (progress-1, progress-2 & progress-3) -->
           <span id="step-1" rel="tipsy-top" title="Basic Rating">Basic Rating</span>
           <span id="step-2" rel="tipsy-top" title="Aroma Profile">Aroma Profile</span>
           <span id="step-3" rel="tipsy-top" title="Flavor Profile">Flavor Profile</span>
@@ -111,70 +111,26 @@
           <a href="#" id="rate-different">Rate A Different Tequila</a>
         </div> <!-- /#rating-header -->
         <form action="" class="rating-form">
-          <div class="form-item txt">
-            <label>Text Field</label>
-            <div class="field">
-              <input type="text" value="" name="rating" size="30" />
-              <p class="notes">This is a help message for this input.</p>
-            </div> <!-- /.field -->
-          </div> <!-- /.form-item -->
-          <div class="form-item txt">
-            <label>Another Text Field</label>
-            <div class="field">
-              <input type="text" value="" name="rating" size="30" />
-              <p class="notes">This is a help message for this input.</p>
-            </div> <!-- /.field -->
-          </div> <!-- /.form-item -->
-          <div class="form-item txtarea">
-            <label>Textarea</label>
-            <div class="field">
-              <textarea name="" cols="31" rows="4"></textarea>
-              <p class="notes">This is a help message for this input.</p>
-            </div> <!-- /.field -->
-          </div> <!-- /.form-item -->
           <div class="form-item rating-slider">
-            <label>Slider 1</label>
+            <label>Rating</label>
             <div class="field">
               <div class="slider"></div> <!-- /.slider -->
               <div class="lower-range">Hate It</div> <!-- /.lower-range -->
               <div class="upper-range">Love It</div> <!-- /.upper-range -->
-              <input id="slider_01" name="" type="hidden" value="50" />
+              <input name="" type="hidden" value="50" />
             </div> <!-- /.field -->
           </div> <!-- /.form-item -->
           <div class="form-item rating-slider">
-            <label>Slider 2</label>
+            <label>Value</label>
             <div class="field">
               <div class="slider"></div> <!-- /.slider -->
-              <div class="lower-range">Hate It</div> <!-- /.lower-range -->
-              <div class="upper-range">Love It</div> <!-- /.upper-range -->
-              <input id="slider_02" name="" type="hidden" value="50" />
-            </div> <!-- /.field -->
-          </div> <!-- /.form-item -->
-          <div class="form-item rating-slider">
-            <label>Another Slider</label>
-            <div class="field">
-              <div class="slider"></div> <!-- /.slider -->
-              <div class="lower-range">Less</div> <!-- /.lower-range -->
-              <div class="upper-range">More more more</div> <!-- /.upper-range -->
-              <input id="slider_03" name="" type="hidden" value="50" />
-            </div> <!-- /.field -->
-            <div class="field">
-              <div class="slider"></div> <!-- /.slider -->
-              <div class="lower-range">Soft</div> <!-- /.lower-range -->
-              <div class="mid-range">Silky</div> <!-- /.mid-range -->
-              <div class="upper-range">Abrasive</div> <!-- /.upper-range -->
-              <input id="slider_04" name="" type="hidden" value="50" />
-            </div> <!-- /.field -->
-            <div class="field">
-              <div class="slider"></div> <!-- /.slider -->
-              <div class="lower-range">Lower</div> <!-- /.lower-range -->
-              <div class="mid-range">Mid</div> <!-- /.mid-range -->
-              <div class="upper-range">Upper</div> <!-- /.upper-range -->
-              <input id="slider_05" name="" type="hidden" value="50" />
+              <div class="lower-range">Ripoff</div> <!-- /.lower-range -->
+              <div class="upper-range">Real Deal</div> <!-- /.upper-range -->
+              <input name="" type="hidden" value="50" />
             </div> <!-- /.field -->
           </div> <!-- /.form-item -->
           <div class="form-item radio">
-            <label>Cool Radio Buttons</label>
+            <label>Buy/Drink Again?</label>
             <div class="field">
               <div class="input-wrap">
                 <span><input type="radio" name="" id="" value="yes" /></span>
@@ -190,41 +146,27 @@
               </div> <!-- /.input-wrap -->
             </div> <!-- /.field -->
           </div> <!-- /.form-item -->
-          <div class="form-item check">
-            <label>Cool Checkboxes</label>
+          <div class="form-item radio">
+            <label>Recommend?</label>
             <div class="field">
               <div class="input-wrap">
-                <span><input type="checkbox" name="" id="" value="" /></span>
-                <label>Agave</label>
+                <span><input type="radio" name="" id="" value="yes" /></span>
+                <label>Yes</label>
               </div> <!-- /.input-wrap -->
               <div class="input-wrap">
-                <span><input type="checkbox" name="" id="" value="" /></span>
-                <label>Butter</label>
+                <span><input type="radio" name="" id="" value="no" /></span>
+                <label>No</label>
               </div> <!-- /.input-wrap -->
-              <div class="input-wrap">
-                <span><input type="checkbox" name="" id="" value="" /></span>
-                <label>Citrus</label>
-              </div> <!-- /.input-wrap -->
-              <div class="input-wrap">
-                <span><input type="checkbox" name="" id="" value="" /></span>
-                <label>Earth</label>
-              </div> <!-- /.input-wrap -->
-              <div class="input-wrap">
-                <span><input type="checkbox" name="" id="" value="" /></span>
-                <label>Grass</label>
-              </div> <!-- /.input-wrap -->
-              <div class="input-wrap">
-                <span><input type="checkbox" name="" id="" value="" /></span>
-                <label>Olive</label>
-              </div> <!-- /.input-wrap -->
-              <div class="input-wrap">
-                <span><input type="checkbox" name="" id="" value="" /></span>
-                <label>Solvent</label>
-              </div> <!-- /.input-wrap -->            
+            </div> <!-- /.field -->
+          </div> <!-- /.form-item -->
+          <div class="form-item txtarea">
+            <label>Comments</label>
+            <div class="field">
+              <textarea name="" cols="31" rows="4"></textarea>
             </div> <!-- /.field -->
           </div> <!-- /.form-item -->
           <div class="actions">
-            <button type="submit">Save Your Rating</button> <em>or</em> <button type="submit">Save and Continue Profiling</button>
+            <button type="submit">Save Basic Rating</button> <em>or</em> <button type="submit">Save and Continue Profiling</button>
           </div> <!-- /.actions -->
         </form>
       </div> <!-- /#rating-form -->
@@ -233,7 +175,7 @@
       <div id="nodes">
         <div class="node lowdown">
           <h3>The Lowdown</h3>
-          <h4><a href="#">Fortaleza Tequila Reposado</a></h4>
+          <h4><a href="#">Casa Noble Single Barrel Reposado</a></h4>
           <a href="#"><img src="/images/pic_placeholder.jpg" alt="Photo of Product" /></a>
           <ul>
             <li>Distillery<br /><strong>Tequila Los Abuelos, S.A. de C.V.</strong></li>

@@ -1850,6 +1850,10 @@ footer p {
   font: 18px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif;
   text-transform: none;
 }
+#main #rating-form #rating-header a:hover + h1 a {
+  text-decoration: underline;
+  color: #b24a00;
+}
 #main #rating-form #rating-header a#rate-different {
   margin-top: 9px;
   float: right;
@@ -1863,6 +1867,18 @@ footer p {
 }
 .rating-form .form-item {
   padding-left: 80px;
+}
+.rating-form .form-item.group label {
+  width: 90px;
+}
+.rating-form .form-item.group .field legend {
+  margin: 3px 0 0 -85px;
+  width: 75px;
+  float: left;
+  display: block;
+  font: 10px "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: right;
 }
 .rating-form .actions {
   padding: 36px 20px 18px 80px;
@@ -1881,6 +1897,7 @@ footer p {
 }
 .form-item.rating-slider .field + .field {
   margin-top: 54px;
+  margin-bottom: 36px;
 }
 .form-item.rating-slider .field .callout {
   margin-left: -6px;
