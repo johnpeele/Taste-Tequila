@@ -51,6 +51,11 @@
 		border-collapse: collapse;
 		border-spacing: 0; }
 		
+  button::-moz-focus-inner,
+  input::-moz-focus-inner { // Inner padding and border oddities in FF3/4
+    border: 0;
+    padding: 0; }
+		
 		
 /* #Basic Styles
 ================================================== */

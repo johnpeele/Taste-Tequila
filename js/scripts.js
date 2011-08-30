@@ -27,6 +27,24 @@ $(document).ready(function() {
     function() { $(this).removeClass('hover').find('ul.dropdown').hide(); }
   );
   
+  /* Self-labeled form fields
+	================================================== */
+	$('input[title], textarea[title]').each(function() {
+		if($(this).val() === '') {
+			$(this).val($(this).attr('title'));	
+		}
+
+		$(this).focus(function() {
+			if($(this).val() == $(this).attr('title')) {
+				$(this).val('').addClass('focused');	
+			}
+		}).blur(function() {
+			if($(this).val() === '') {
+				$(this).val($(this).attr('title')).removeClass('focused');	
+			}
+		});
+	});
+  
   /* Tipsy Tooltips
 	================================================== */
   $('[rel=tipsy]').tipsy({gravity: 'w', opacity: 1});
@@ -163,23 +181,5 @@ $(document).ready(function() {
       $(this).parent().find('span input').attr('checked', true);
     }
   });
-	
-	/* Self-labeled form fields
-	================================================== */
-	$('input[title], textarea[title]').each(function() {
-		if($(this).val() === '') {
-			$(this).val($(this).attr('title'));	
-		}
-
-		$(this).focus(function() {
-			if($(this).val() == $(this).attr('title')) {
-				$(this).val('').addClass('focused');	
-			}
-		}).blur(function() {
-			if($(this).val() === '') {
-				$(this).val($(this).attr('title')).removeClass('focused');	
-			}
-		});
-	});
 	
 });

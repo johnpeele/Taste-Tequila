@@ -120,8 +120,9 @@ input[type=submit] { .button(#fe8500, #fe6400, #fff, #dd6c00, 0 -1px 0 rgba(0,0,
 #search form { margin: 0; }
 #search form label { position: absolute; left: -1000em; }
 #search form input { vertical-align: middle; }
-#search form input[type="text"] { margin: 0 17px 0 0; padding: 6px 0; width: 220px; display: inline; font: 12px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; color: @gray-main; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
+#search form input[type="text"] { margin: 0; padding: 8px 0; width: 220px; display: inline; font: 13px "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; color: @gray-main; background: transparent; outline: none; border: none; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; }
 #search form input[type="text"]:focus {	color: #444; border: none; -moz-box-shadow: none; -webkit-box-shadow: none;	box-shadow: none; } 
+#search form input[type="image"] { position: absolute; right: 0; }
 
 /* account widget ---------------------------------------- */
 #account { padding: 10px 0 0 20px; width: 280px; height: 26px; position: absolute; top: 0; right: 10px; font: 13px "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; background-color: @beige-lighter; .border-radius(0, 0, 5px, 5px); .box-shadow(0 1px 1px rgba(0,0,0,.05)); }
@@ -144,7 +145,7 @@ input[type=submit] { .button(#fe8500, #fe6400, #fff, #dd6c00, 0 -1px 0 rgba(0,0,
 
 /* activity feeds ---------------------------------------- */
 #activity-feed { }
-#activity-feed .feed-item { padding: 25px 0 25px 60px; background: url(/images/bg_divider.png) bottom left no-repeat; }
+#activity-feed .feed-item { padding: 25px 0 25px 60px; background: url(/images/bg_divider.png) bottom left no-repeat; .clearfix; }
 #activity-feed .tabs-content .feed-item:first-child { padding-top: 0; }
 #activity-feed .feed-item > a img { margin-left: -60px; float: left; .img-square(40px); }
 #activity-feed .feed-item .act { padding-right: 55px; background-position: top right; background-repeat: no-repeat; }
@@ -270,7 +271,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 #s-profile #profile { margin-bottom: 36px; padding: 20px; position: relative; border-bottom: 1px solid #e0dcd3; .rounded(5px); }
 #s-profile #profile img.avatar { float: left; .img-square(90px); .box-shadow(0 1px 2px rgba(0,0,0,.4)); }
 #s-profile #profile .tape { width: 42px; height: 29px; position: absolute; top: 12px; left: 10px; display: block; background: url(/images/bg_avatar-tape.png) no-repeat; z-index: 2; }
-#s-profile #profile #edit-profile { width: 69px; position: absolute; top: 130px; .button(#fe8500, #fe6400, #fff, #dd6c00, 0 -1px 0 rgba(0,0,0,.3), 11px, 11px 15px 8px, 4px); }
+#s-profile #profile #edit-profile { width: 69px; position: absolute; top: 130px; white-space: nowrap; .button(#fe8500, #fe6400, #fff, #dd6c00, 0 -1px 0 rgba(0,0,0,.3), 11px, 11px 15px 8px, 4px); }
 #s-profile #profile #details { padding: 0 20px 0 20px; width: 280px; float: left; }
 #s-profile #profile #details h1 { margin-bottom: 10px; font-size: 34px; line-height: 1.2; text-shadow: 0 1px 0 rgb(255,255,255); }
 #s-profile #profile #details ul { padding-left: 30px; font-size: 14px; }
