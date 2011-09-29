@@ -525,6 +525,100 @@ button::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
 .actions {
   padding: 20px;
 }
+/* block messages ---------------------------------------- */
+.block-message {
+  margin: 0 10px 18px;
+  padding: 10px 20px;
+  position: relative;
+  background-color: #ffffff;
+  border: 1px solid #eeeeee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -webkit-box-shadow: 0 0 10px #ffffff;
+  -moz-box-shadow: 0 0 10px #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+}
+.block-message.warning {
+  background-color: #fdf5d9;
+  border: 1px solid #fee9a4;
+}
+.block-message.error {
+  background-color: #fddfde;
+  border: 1px solid #fbc7c6;
+}
+.block-message.success {
+  background-color: #d1eed1;
+  border: 1px solid #bfe7bf;
+}
+.block-message .close {
+  float: right;
+  font: bold 20px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 13.5px;
+  text-shadow: 0 1px 0 #ffffff;
+  text-decoration: none;
+  color: #000000;
+  filter: alpha(opacity=20);
+  -khtml-opacity: 0.2;
+  -moz-opacity: 0.2;
+  opacity: 0.2;
+}
+.block-message .close:hover {
+  filter: alpha(opacity=80);
+  -khtml-opacity: 0.8;
+  -moz-opacity: 0.8;
+  opacity: 0.8;
+}
+.block-message p {
+  margin-right: 30px;
+  margin-bottom: 9px;
+}
+.block-message p strong {
+  font-family: 'ClarendonFSBold';
+  font-weight: normal;
+}
+.block-message ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+.block-message li {
+  margin-bottom: 0;
+}
+.block-message .block-actions {
+  margin-bottom: 5px;
+}
+.block-message .block-actions .btn {
+  padding: 8px 15px 5px;
+  display: inline-block;
+  font: 11px/1 "BrandonGrotesque-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #666666;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, color-stop(25%, #ffffff), #e6e6e6);
+  background-image: -moz-linear-gradient(#ffffff, color-stop(#ffffff, 25%), #e6e6e6);
+}
+.block-message .block-actions .btn:hover {
+  background-position: 0 -15px;
+  color: #333;
+  text-decoration: none;
+}
+.block-message .block-actions .btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
 /* ---------------------------------------------------------------------------------------------
 
 	header - mast

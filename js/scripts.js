@@ -80,6 +80,13 @@ $(document).ready(function() {
     });
   });
   
+  /* Block Messages - close
+  ================================================== */
+  $('.block-message .close').click(function() {
+    $(this).parent().fadeOut();
+    return false;
+  });
+  
   /* Brand Profile - show/hide categories
   ================================================== */
   $('.group .singles').hide();
