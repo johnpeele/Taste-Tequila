@@ -1274,6 +1274,7 @@ footer p {
   width: 69px;
   position: absolute;
   top: 130px;
+  left: 20px;
   white-space: nowrap;
   padding: 11px 15px 8px;
   display: inline-block;
