@@ -164,7 +164,7 @@ input[type=submit] { .button(#fe8500, #fe6400, #fff, #dd6c00, 0 -1px 0 rgba(0,0,
 #account strong { margin-right: 15px; float: left; font-weight: normal; color: @gray-main; }
 #account ul.nav-tabs { float: left; }
 #account ul.nav-tabs li { margin-right: 4px; }
-#account ul.nav-tabs em { margin-left: 4px; vertical-align: top; font: italic 12px Georgia, "Times New Roman", Times, serif; line-height: 0.9; text-transform: none; color: @orange; }
+#account ul.nav-tabs em { margin-left: 4px; font: italic 12px Georgia, "Times New Roman", Times, serif; line-height: 0.9; text-transform: none; color: @orange; }
 
 /* ---------------------------------------------------------------------------------------------
 
@@ -436,7 +436,7 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 .rating-form .form-item { padding-left: 80px; }
 .rating-form .form-item.group label { width: 90px; }
-.rating-form .form-item.group .field legend { margin: 3px 0 0 -85px; width: 75px; float: left; display: block; font: 10px "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; text-align: right; }
+.rating-form .form-item.group .field span.group-legend { margin: 3px 0 0 -85px; width: 75px; float: left; display: block; font: 10px "BrandonGrotesque-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; text-transform: uppercase; text-align: right; }
 .rating-form .actions { padding: 36px 20px 18px 80px; }
 .rating-form .actions em { padding: 0 15px; font: italic 13px Georgia, "Times New Roman", Times, serif; }
 
@@ -482,31 +482,6 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 /* sidebar - lowdown ---------------------------------------- */
 #s-rating #sidebar .node.lowdown { .rounded(5px); }
 #s-rating #sidebar .node.lowdown h4 { margin-bottom: 18px; padding-bottom: 10px; font: 16px/1 "ClarendonFSMedium", Georgia, "Times New Roman", Times, serif; text-transform: none; background: url(/images/bg_divider.png) bottom left no-repeat; }
-
-
-/* #Media Queries
-================================================== */
-	
-/* iPad Portrait/Browser ---------------------------------------- */
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
-
-/* Mobile/Browser ---------------------------------------- */
-@media only screen and (max-width: 767px) {}
-
-/* Mobile Landscape/Browser ---------------------------------------- */
-@media only screen and (min-width: 480px) and (max-width: 767px) {}
-
-/* Anything smaller than standard 960 ---------------------------------------- */
-@media only screen and (max-width: 959px) {}
-
-/* iPad Portrait Only ---------------------------------------- */
-@media only screen and (min-width: 768px) and (max-width: 991px) and (max-device-width: 1000px) {}
-
-/* Mobile Only ---------------------------------------- */
-@media only screen and (max-width: 767px) and (max-device-width: 1000px) {}
-
-/* Mobile Landscape Only ---------------------------------------- */
-@media only screen and (min-width: 480px) and (max-width: 767px) and (max-device-width: 1000px) {}
 	
 
 /* #Font-Face
@@ -599,10 +574,93 @@ footer p { margin: 25px 10px 0 0; float: right; font-size: 10px; }
 
 /* #Browser Debugging
 ================================================== */
-.ie6 { }
-.ie7 { }
-.ie8 { }
+/* IE8 */
+.ie8 #sidebar .node .ratings-list .ratings span {
+  margin-right: 2px;
+  margin-bottom: 1px;
+  width: 26px;
+  float: none;
+  display: block;
+  cursor: default;
+  font: 12px/1.2 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #999999;
+}
 
-.ff2 { }
-.ff3 { }
-.ff3_6 { }
+.ie8 #s-profile .ratings {
+  margin-bottom: 10px;
+  width: 141px;
+  height: 52px;
+  float: right;
+}
+
+.ie8 #sidebar .node .badge-list li, .ie8 #sidebar .node .avatar-grid li {
+  margin: 0 8px 10px 0;
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+
+/* IE7 */
+.ie7 #header-wrapper header#mast {
+  height: 108px;
+  position: relative;
+  z-index: 1000;
+}
+
+.ie7 #content {
+  padding: 36px 0 72px;
+  z-index: 500;
+}
+
+.ie7 #primary-nav li {
+  margin-right: 5px;
+  position: relative;
+}
+
+.ie7 #primary-nav li ul.dropdown {
+  margin: 0;
+  padding: 5px 0;
+  min-width: 205px;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  display: none;
+  background: #ffffff;
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+  -webkit-background-clip: padding-box;
+  border-bottom: 1px solid #e0dcd3;
+  z-index: 3;
+}
+
+.ie7 #sidebar .node .ratings-list .ratings span {
+  margin-right: 2px;
+  margin-bottom: 1px;
+  width: 26px;
+  float: none;
+  display: block;
+  cursor: default;
+  font: 12px/1.2 "BrandonGrotesque-Black", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #999999;
+}
+
+.ie7 .form-item.rating-slider .field {
+  margin: 18px 0 18px 160px;
+  position: relative;
+  float: none;
+  height: 36px;
+}
+
+.ie7 button, input[type=submit] {
+  width: 230px;
+}
+
+.ie7 #footer-wrapper {
+  background: url(/images/bg_footer-wrapper.png) 0 0 repeat-x;
+  position: relative; 
+}
